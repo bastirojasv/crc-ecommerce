@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Safety Gloves",
+    "description": "High-quality protective gloves.",
+    "images": ["gloves.jpg"],
+    "categoryId": 1
+  },
+  {
+    "id": 2,
+    "name": "Steel Helmet",
+    "description": "Industrial-grade helmet.",
+    "images": ["helmet.jpg"],
+    "categoryId": 2
+  }
+]
