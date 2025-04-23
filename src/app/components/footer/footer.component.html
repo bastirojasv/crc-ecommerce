@@ -1,1 +1,22 @@
-<p>footer works!</p>
+<footer class="bg-dark text-light pt-4 pb-3 mt-auto">
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+  
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h5 class="mb-2">¿Necesitas atención personalizada?</h5>
+          <p class="mb-0">Déjanos tu correo y te contactaremos.</p>
+        </div>
+  
+        <div class="col-md-6">
+          <form class="d-flex flex-column flex-md-row gap-2 justify-content-md-end">
+            <input type="email" class="form-control" placeholder="Tu correo electrónico" [(ngModel)]="userEmail" name="email" required />
+            <button type="submit" class="btn btn-warning" (click)="handleSubmit()">Enviar</button>
+          </form>
+        </div>
+  
+      </div>
+      <hr class="bg-light mt-4" />
+      <p class="text-center small mb-0">© {{ currentYear }} CRC Comercial SPA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  

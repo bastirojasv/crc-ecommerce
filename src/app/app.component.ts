@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     RouterModule,       
     HeaderComponent,    
-    FooterComponent     
+    FooterComponent,
+    FormsModule     
   ],
   template: `
     <app-header></app-header>

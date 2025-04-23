@@ -27,4 +27,14 @@
     border: none;
     font-size: 1.5rem;
 }
+
+.modal-overlay {
+    animation: fadeOverlay 200ms ease-out;
+}
+  
+@keyframes fadeOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
   
