@@ -1,27 +1,64 @@
-# CrcEcommerce
+# 🛒 CRC eCommerce (Standalone Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Proyecto web de tienda en línea desarrollado con Angular moderno (standalone), pensado para ofrecer productos como insumos médicos y herramientas de construcción, sin stock ni pasarela de pagos.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Descripción
 
-## Code scaffolding
+Este eCommerce es una maqueta funcional **orientada a móviles** que simula un flujo de compra básico mediante:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Visualización de productos
+- Carrito de compras persistente con `localStorage`
+- Envío de cotización vía formulario (email)
+- Datos simulados desde archivos JSON
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🧩 Tecnologías utilizadas
 
-## Running unit tests
+- ✅ Angular 17 (Standalone Components)
+- ✅ SCSS + Bootstrap 5
+- ✅ GitHub + GitHub Pages (opcional)
+- ✅ EmailJS o Formspree para formulario de contacto
+- ✅ JSON estático simula backend/API
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 📦 Características
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Visualización de productos desde archivo `products.json`
+- Modal detallado con selector de cantidad
+- Carrito persistente con resumen final
+- Categorías dinámicas cargadas desde `categories.json`
+- Layout responsivo (mobile-first)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🛠️ Instalación local
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta el servidor local:
+
+```bash
+ng serve
+```
+
+4. Abre http://localhost:4200 en tu navegador.
+
+### 📧 Contacto
+Para contactar o cotizar productos, se utiliza un formulario que envía los datos seleccionados directamente a un correo configurado.
+
+
