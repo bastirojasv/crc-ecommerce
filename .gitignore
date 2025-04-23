@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular configuration files (optional backups)
+angular.json.*
+tsconfig.*.json.*
+/.vscode
