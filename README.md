@@ -6,7 +6,7 @@ Proyecto web de tienda en línea desarrollado con Angular moderno (standalone), 
 
 ## 🚀 Descripción
 
-Este eCommerce es una maqueta funcional **orientada a móviles** que simula un flujo de compra básico mediante:
+Este eCommerce es una maqueta funcional que simula un flujo de compra básico mediante:
 
 - Visualización de productos
 - Carrito de compras persistente con `localStorage`
@@ -17,10 +17,8 @@ Este eCommerce es una maqueta funcional **orientada a móviles** que simula un f
 
 ## 🧩 Tecnologías utilizadas
 
-- ✅ Angular 17 (Standalone Components)
+- ✅ Angular 18 (Standalone Components)
 - ✅ SCSS + Bootstrap 5
-- ✅ GitHub + GitHub Pages (opcional)
-- ✅ EmailJS o Formspree para formulario de contacto
 - ✅ JSON estático simula backend/API
 
 ---
