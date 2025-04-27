@@ -1,11 +1,10 @@
-import { Component, OnInit, Output, EventEmitter, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../../models/product.model';
 import Swiper from 'swiper/bundle'; 
 import 'swiper/css/bundle';
-import { Navigation } from 'swiper/modules';  // Don't forget to import Navigation
 
 @Component({
   selector: 'app-featured-products',

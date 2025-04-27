@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CategoryService, Category } from '../../services/category.service';
 
@@ -14,11 +14,15 @@ import { CategoryService, Category } from '../../services/category.service';
 export class HeaderComponent implements OnInit {
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService) {}
+  constructor(private categoryService: CategoryService, private router : Router) {}
 
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe(data => {
       this.categories = data;
     });
+  }
+
+  goToCategory(categoryId: number): void {
+    this.router.navigate(['/products'], { queryParams: { category: categoryId } });
   }
 }

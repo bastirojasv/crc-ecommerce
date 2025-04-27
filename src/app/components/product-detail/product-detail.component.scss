@@ -28,15 +28,6 @@
     font-size: 1.5rem;
 }
 
-.modal-overlay {
-    animation: fadeOverlay 200ms ease-out;
-}
-  
-@keyframes fadeOverlay {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .modal-content {
     position: fixed;
     top: 10%;
@@ -58,6 +49,20 @@
     height: 100vh;
     background: rgba(0,0,0,0.5);
     z-index: 1040;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background-color: #FF9800;
+    border-color: #FF9800;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken(#FF9800, 10%);
+      border-color: darken(#FF9800, 10%);
+    }
 }
   
   

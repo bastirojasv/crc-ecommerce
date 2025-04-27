@@ -1,5 +1,5 @@
-<div class="modal-overlay" (click)="close()" @fadeOverlay></div>
-<div class="modal-content" @fadeScale>
+<div class="modal-overlay" (click)="close()"></div>
+<div class="modal-content">
   <button class="close-button" (click)="close()">✖</button>
   <div class="row">
     <div class="col-md-6">
@@ -15,7 +15,7 @@
         <button (click)="increase()" class="btn btn-secondary ms-2">+</button>
       </div>
 
-      <button class="btn btn-warning">Añade {{ quantity }} al carrito</button>
+      <button class="btn btn-add-to-cart mt-auto">Añade {{ quantity }} al carrito</button>
     </div>
   </div>
 </div>

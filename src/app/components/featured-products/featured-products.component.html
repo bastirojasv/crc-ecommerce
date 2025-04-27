@@ -1,7 +1,10 @@
 <div class="swiper featured-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let product of featuredProducts">
-      <app-product-card [product]="product" (viewProduct)="openProduct(product)"></app-product-card>
+      <app-product-card 
+        [product]="product" 
+        (viewProduct)="openProduct(product)">
+      </app-product-card>
     </div>
   </div>
   <div class="swiper-button-next"></div>
