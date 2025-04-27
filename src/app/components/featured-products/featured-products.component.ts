@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, AfterViewInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
@@ -13,7 +13,7 @@ import 'swiper/css/bundle';
   templateUrl: './featured-products.component.html',
   styleUrls: ['./featured-products.component.scss']
 })
-export class FeaturedProductsComponent implements OnInit {
+export class FeaturedProductsComponent implements OnInit, AfterViewInit {
   @Output() productSelected = new EventEmitter<Product>();
 
   featuredProducts: Product[] = [];
@@ -23,18 +23,21 @@ export class FeaturedProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
       this.featuredProducts = [...products]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 5);
+        .sort(() => 0.8 - Math.random())
+        .slice(0, 8);
     });
   }
 
 
   ngAfterViewInit() {
     setTimeout(() => {
+
+      const loopEnabled = this.featuredProducts.length >= 3; // Enable loop if more than 3 products
+
       new Swiper('.featured-swiper', {
         slidesPerView: 3,
         spaceBetween: 20,
-        loop: true,
+        loop: loopEnabled,
         navigation: {
           nextEl: '.featured-swiper-button-next',
           prevEl: '.featured-swiper-button-prev',
@@ -53,7 +56,7 @@ export class FeaturedProductsComponent implements OnInit {
       });            
     }, 0);
   }
-    
+
   openProduct(product: Product) {
     this.productSelected.emit(product);
   }

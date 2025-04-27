@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeaturedProductsComponent } from '../../components/featured-products/featured-products.component';
 import { ProductDetailComponent } from '../../components/product-detail/product-detail.component';
@@ -14,7 +14,7 @@ import 'swiper/css/bundle';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   selectedProduct?: Product;
   featuredProductsCarousel: Product[] = [];
 
@@ -39,10 +39,13 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
+
+      const loopEnabled = this.featuredProductsCarousel.length >= 3;
+
       new Swiper('.additional-swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
-        loop: true,
+        loop: loopEnabled,
         loopAdditionalSlides: 5,
         centeredSlides: true,
         effect: 'fade',
