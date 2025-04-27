@@ -1,0 +1,34 @@
+// Featured Swiper - Productos destacados
+.featured-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px; // tamaño mínimo para que no se rompa en mobile
+}
+
+.featured-swiper-button-next,
+.featured-swiper-button-prev {
+  color: #FF9800;
+  font-size: 30px;
+}
+
+// Additional Swiper - Carrusel de imágenes
+.additional-swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.additional-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.additional-swiper img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}

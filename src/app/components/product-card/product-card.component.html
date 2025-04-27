@@ -1,15 +1,16 @@
 <div class="card h-100">
-    <img [src]="'assets/images/' + product.images[0]" class="card-img-top" [alt]="product.name" style="width: 250px; height: 250px;"/>
-    <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <p class="card-text">{{ product.description }}</p>
-        <button class="btn btn-sm btn-outline-primary me-2" (click)="openModal()">Ver más</button>
-        <button class="btn btn-sm btn-warning">Añadir al carrito</button>
-    </div>
+  <img
+    [src]="'assets/images/' + product.images[0]"
+    class="card-img-top"
+    [alt]="product.name"
+    (click)="emitViewProduct()"
+  />
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title text-center">{{ product.name }}</h5>
+    <button
+      class="btn btn-add-to-cart mt-auto"
+    >
+      Añadir al carrito
+    </button>
+  </div>
 </div>
-
-<app-product-detail
-  *ngIf="showModal"
-  [product]="product"
-  (closed)="closeModal()">
-</app-product-detail>

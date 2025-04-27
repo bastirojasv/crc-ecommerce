@@ -1,8 +1,27 @@
-<div class="container">
-  <h2>Productos Más Vendidos</h2>
-  <div class="row">
-    <div class="col-12 col-md-4 mb-4" *ngFor="let product of products">
-      <app-product-card [product]="product"></app-product-card>
+<h2 class="text-center my-5">Conoce nuestros destacados</h2>
+
+<div class="swiper additional-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let product of featuredProductsCarousel">
+      <img
+        [src]="'assets/images/' + product.images[0]"
+        class="img-fluid rounded"
+        alt="{{ product.name }}"
+      />
     </div>
   </div>
+
+  <div class="additional-swiper-pagination"></div> <!-- ⬅ Asegúrate que sea esta clase -->
+</div>
+
+<div class="container">
+  <div class="row">
+    <app-featured-products (productSelected)="openProduct($event)"></app-featured-products>
+  </div>
+
+  <app-product-detail
+    *ngIf="selectedProduct"
+    [product]="selectedProduct"
+    (closed)="closeProduct()"
+  ></app-product-detail>
 </div>

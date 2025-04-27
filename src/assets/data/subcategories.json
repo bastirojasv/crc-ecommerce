@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "MANO"
+  },
+  {
+    "id": 2,
+    "name": "HIGIENE"
+  },
+  {
+    "id": 3,
+    "name": "PIES"
+  },
+  {
+    "id": 4,
+    "name": "VISUAL"
+  },
+  {
+    "id": 5,
+    "name": "ACCESORIO"
+  },
+  {
+    "id": 6,
+    "name": "CABEZA"
+  },
+  {
+    "id": 7,
+    "name": "CUERPO"
+  },
+  {
+    "id": 8,
+    "name": "PROTECCION SOLAR"
+  },
+  {
+    "id": 9,
+    "name": "RESPIRACION"
+  },
+  {
+    "id": 10,
+    "name": "RODILLA"
+  },
+  {
+    "id": 11,
+    "name": "AUDITIVO"
+  },
+  {
+    "id": 12,
+    "name": "ABDOMEN"
+  },
+  {
+    "id": 13,
+    "name": "ALTURA"
+  }
+]

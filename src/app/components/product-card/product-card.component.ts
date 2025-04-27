@@ -1,26 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
-import { FormsModule } from '@angular/forms';
-import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CommonModule, FormsModule, ProductDetailComponent],
+  imports: [CommonModule],
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Output() viewProduct = new EventEmitter<Product>();
 
-  showModal = false;
-
-  openModal() {
-    this.showModal = true;
-  }
-
-  closeModal() {
-    this.showModal = false;
+  emitViewProduct() {
+    this.viewProduct.emit(this.product);
   }
 }
