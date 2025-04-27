@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
-        loopAdditionalSlides: 1,
+        loopAdditionalSlides: 5,
         centeredSlides: true,
         effect: 'fade',
         fadeEffect: {
@@ -56,15 +56,15 @@ export class HomeComponent implements OnInit {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 1,
-          }
         }
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 1,
+        //   },
+        //   1024: {
+        //     slidesPerView: 1,
+        //   }
+        // }
       });           
     }, 0);
   }

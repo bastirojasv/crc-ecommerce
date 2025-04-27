@@ -20,6 +20,15 @@ export class FeaturedProductsComponent implements OnInit {
 
   constructor(private productService: ProductService) {}
 
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe((products) => {
+      this.featuredProducts = [...products]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 5);
+    });
+  }
+
+
   ngAfterViewInit() {
     setTimeout(() => {
       new Swiper('.featured-swiper', {
@@ -44,15 +53,7 @@ export class FeaturedProductsComponent implements OnInit {
       });            
     }, 0);
   }
-
-  ngOnInit(): void {
-    this.productService.getProducts().subscribe((products) => {
-      this.featuredProducts = [...products]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 5);
-    });
-  }
-
+    
   openProduct(product: Product) {
     this.productSelected.emit(product);
   }
