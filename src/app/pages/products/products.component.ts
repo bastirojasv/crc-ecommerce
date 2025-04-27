@@ -15,6 +15,7 @@ import { ProductDetailComponent } from '../../components/product-detail/product-
 })
 export class ProductsComponent {
 
+  // Variables
   selectedProduct?: Product;
 
   currentPage: number = 1;
@@ -81,5 +82,14 @@ export class ProductsComponent {
       this.updatePaginatedProducts();
     }
   }
+
+  get startItem(): number {
+    return (this.currentPage - 1) * this.itemsPerPage + 1;
+  }
+  
+  get endItem(): number {
+    const end = this.currentPage * this.itemsPerPage;
+    return end > this.filteredProducts.length ? this.filteredProducts.length : end;
+  }  
   
 }
