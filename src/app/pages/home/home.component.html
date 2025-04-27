@@ -1,6 +1,6 @@
-<h2 class="text-center my-5">Conoce nuestros destacados</h2>
+<h2 class="my-5">NUESTROS DESTACADOS</h2>
 
-<div class="swiper additional-swiper">
+<div class="swiper carrousel-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let product of featuredProductsCarousel">
       <img
@@ -9,12 +9,13 @@
         alt="{{ product.name }}"
       />
     </div>
+    
   </div>
-
-  <div class="additional-swiper-pagination"></div> <!-- ⬅ Asegúrate que sea esta clase -->
+  <div class="swiper-pagination"></div>
 </div>
 
 <div class="container">
+  <h2 class="my-5">SEGURIDAD INDUSTRIAL</h2>
   <div class="row">
     <app-featured-products (productSelected)="openProduct($event)"></app-featured-products>
   </div>

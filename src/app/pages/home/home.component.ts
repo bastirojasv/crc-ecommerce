@@ -23,11 +23,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.featuredProductsCarousel = [...products]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 5);
+        .sort(() => 0.8 - Math.random())
+        .slice(0, 8);
     });
   }
-
 
   openProduct(product: Product) {
     this.selectedProduct = product;
@@ -38,38 +37,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-
-      const loopEnabled = this.featuredProductsCarousel.length >= 3;
-
-      new Swiper('.additional-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: loopEnabled,
-        loopAdditionalSlides: 5,
-        centeredSlides: true,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
-        pagination: {
-          el: '.additional-swiper-pagination',
-          clickable: true,
-        },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        }
-        // breakpoints: {
-        //   640: {
-        //     slidesPerView: 1,
-        //   },
-        //   1024: {
-        //     slidesPerView: 1,
-        //   }
-        // }
-      });           
-    }, 0);
+    var swiper = new Swiper('.carrousel-swiper', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
+    });
   }
   
 }

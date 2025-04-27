@@ -1,10 +1,11 @@
-<div class="featured-swiper">
+<div class="swiper featured-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let product of featuredProducts">
       <app-product-card [product]="product" (viewProduct)="openProduct(product)"></app-product-card>
     </div>
   </div>
-
-  <div class="featured-swiper-button-next"></div> <!-- Flechas únicas -->
-  <div class="featured-swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
+
+

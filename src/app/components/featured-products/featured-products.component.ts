@@ -5,6 +5,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../../models/product.model';
 import Swiper from 'swiper/bundle'; 
 import 'swiper/css/bundle';
+import { Navigation } from 'swiper/modules';  // Don't forget to import Navigation
 
 @Component({
   selector: 'app-featured-products',
@@ -13,7 +14,7 @@ import 'swiper/css/bundle';
   templateUrl: './featured-products.component.html',
   styleUrls: ['./featured-products.component.scss']
 })
-export class FeaturedProductsComponent implements OnInit, AfterViewInit {
+export class FeaturedProductsComponent implements OnInit {
   @Output() productSelected = new EventEmitter<Product>();
 
   featuredProducts: Product[] = [];
@@ -25,36 +26,26 @@ export class FeaturedProductsComponent implements OnInit, AfterViewInit {
       this.featuredProducts = [...products]
         .sort(() => 0.8 - Math.random())
         .slice(0, 8);
+
+      this.initSwiper();
     });
   }
 
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-
-      const loopEnabled = this.featuredProducts.length >= 3; // Enable loop if more than 3 products
-
-      new Swiper('.featured-swiper', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        loop: loopEnabled,
-        navigation: {
-          nextEl: '.featured-swiper-button-next',
-          prevEl: '.featured-swiper-button-prev',
+  initSwiper(): void {
+    const swiper = new Swiper(".featured-swiper", {
+      slidesPerView: 'auto',
+      slidesPerGroupSkip: 2,
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
         },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          }
-        }
-      });            
-    }, 0);
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   }
 
   openProduct(product: Product) {
