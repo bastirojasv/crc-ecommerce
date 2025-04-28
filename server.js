@@ -1,17 +1,13 @@
 const express = require('express');
-const path = require('path');
+const port = process.env.PORT || 3000;
 const app = express();
 
-// Servir archivos estáticos del build de Angular
-app.use(express.static(path.join(__dirname, 'dist/crc-ecommerce')));
+app.use(express.static("public/dist"))
 
-// Cualquier otra ruta debe devolver index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/crc-ecommerce/index.html'));
-});
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, '/../../public/dist/index.html'));
+})
 
-// Escuchar el puerto que asigna Heroku o localmente en 8080
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Servidor iniciado en puerto ${PORT}`);
+app.listen(port, function() {
+  console.log(`Server is running at port ${port}`);
 });
