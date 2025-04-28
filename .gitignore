@@ -43,9 +43,5 @@ Thumbs.db
 
 # Angular configuration files (optional backups)
 angular.json.*
-tsconfig.*.json.*
 /.vscode
-tsconfig.app.json
-tsconfig.json
-tsconfig.spec.json
 .editorconfig

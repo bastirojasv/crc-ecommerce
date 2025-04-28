@@ -1,8 +1,6 @@
-<div class="text-center my-5">
+<div class="my-5">
   <h2 class="category-title">{{ currentCategoryName || 'Todos los Productos' }}</h2>
 </div>
-
-
 
 <div class = "row">
 
@@ -10,15 +8,17 @@
   <div class="col-md-3 mb-4">
     <div class="filter-container p-3 rounded shadow-sm">
       <div class="mb-3">
-        <div class="input-icon">
-          <i class="fa fa-search"></i>
+        <div class="input-icon" [class.focused]="inputFocused">
+          <i class="fas fa-search"></i> 
           <input
             type="text"
             class="form-control search-input"
             placeholder="Busca un producto"
             [(ngModel)]="searchText"
+            (focus)="inputFocused = true"
+            (blur)="inputFocused = false"
             (input)="applyFilters()">
-        </div>
+        </div>        
       </div>
     
       <div class="input-icon">

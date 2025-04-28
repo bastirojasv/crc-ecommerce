@@ -20,6 +20,8 @@ export class ProductsComponent {
   // Variables
   selectedProduct?: Product;
 
+  inputFocused: boolean = false;
+
   searchText: string = '';
   sortOption: string = '';
   selectedCategories: number[] = [];
