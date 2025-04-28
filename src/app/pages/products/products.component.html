@@ -1,23 +1,108 @@
-<div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let product of paginatedProducts">
-      <app-product-card
-        [product]="product"
-        (viewProduct)="openProduct(product)">
-      </app-product-card>
-    </div>
+<div class="text-center my-5">
+  <h2 class="category-title">{{ currentCategoryName || 'Todos los Productos' }}</h2>
 </div>
 
-<div class="d-flex justify-content-center mt-4">
+
+
+<div class = "row">
+
+  <!-- Filtro de productos -->
+  <div class="col-md-3 mb-4">
+    <div class="filter-container p-3 rounded shadow-sm">
+      <div class="mb-3">
+        <div class="input-icon">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            class="form-control search-input"
+            placeholder="Busca un producto"
+            [(ngModel)]="searchText"
+            (input)="applyFilters()">
+        </div>
+      </div>
+    
+      <div class="input-icon">
+        <i class="fa fa-chevron-down"></i> <!-- Ícono de flecha -->
+        <select class="form-control sort-select" [(ngModel)]="sortOption" (change)="applyFilters()">
+          <option value="">Ordenar por</option>
+          <option value="name-asc">Nombre A-Z</option>
+          <option value="name-desc">Nombre Z-A</option>
+        </select>
+      </div>      
+    
+      <div *ngFor="let category of categories" class="form-check mb-2">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          [id]="'cat-' + category.id"
+          [value]="category.id"
+          (change)="onCategoryChange($event)">
+        <label class="form-check-label" [for]="'cat-' + category.id">
+          {{ category.name }}
+        </label>
+      </div>
+    
+      <button class="btn btn-outline-warning w-100 mt-3" (click)="clearFilters()">
+        Borrar Filtros
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Grilla de productos -->
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let product of paginatedProducts">
+        <app-product-card
+          [product]="product"
+          (viewProduct)="openProduct(product)">
+        </app-product-card>
+      </div>
+  </div>
+
+  <!-- Paginador -->
+  <div class="d-flex justify-content-center mt-4">
     <nav>
       <ul class="pagination">
+        <!-- Ir a Primera Página -->
         <li class="page-item" [class.disabled]="currentPage === 1">
-          <a class="page-link" (click)="previousPage()">Anterior</a>
+          <a class="page-link" (click)="goToPage(1)">
+            <span>&laquo;|</span> <!-- ⏮️ -->
+          </a>
         </li>
+  
+        <!-- Página Anterior -->
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="previousPage()">
+            <span>&laquo;</span> <!-- ◀️ -->
+          </a>
+        </li>
+  
+        <!-- Botones de páginas visibles -->
+        <li
+          *ngFor="let page of visiblePages"
+          class="page-item"
+          [class.active]="currentPage === page">
+          <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+        </li>
+  
+        <!-- Página Siguiente -->
         <li class="page-item" [class.disabled]="currentPage === totalPages">
-          <a class="page-link" (click)="nextPage()">Siguiente</a>
+          <a class="page-link" (click)="nextPage()">
+            <span>&raquo;</span> <!-- ▶️ -->
+          </a>
+        </li>
+  
+        <!-- Ir a Última Página -->
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" (click)="goToPage(totalPages)">
+            <span>|&raquo;</span> <!-- ⏭️ -->
+          </a>
         </li>
       </ul>
     </nav>
+  </div>
+
 </div>
 
 <div class="text-center my-3">

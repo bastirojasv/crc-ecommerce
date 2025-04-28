@@ -1,37 +1,44 @@
 .pagination {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding-left: 0;
-  
-    .page-item {
-      margin: 0 5px;
-  
-      .page-link {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+
+  .page-item {
+    margin: 0 5px;
+
+    .page-link {
+      background-color: white;
+      border: 2px solid #FF9800;
+      color: #FF9800;
+      border-radius: 50px;
+      padding: 8px 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
         background-color: #FF9800;
-        border: none;
         color: white;
-        border-radius: 50px;
-        padding: 8px 16px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-  
-        &:hover {
-          background-color: darken(#FF9800, 10%);
-          transform: scale(1.05);
-        }
-  
-        &:focus {
-          box-shadow: none;
-        }
+        transform: scale(1.05);
       }
-  
-      &.disabled .page-link {
-        background-color: #ffc266; // color más claro para disabled
-        cursor: not-allowed;
-        opacity: 0.7;
-        transform: none;
+
+      &:focus {
+        box-shadow: none;
       }
     }
+
+    &.active .page-link {
+      background-color: #FF9800;
+      color: white;
+      font-weight: bold;
+      transform: scale(1.1);
+    }
+
+    &.disabled .page-link {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
 }
 
 .text-center {
@@ -39,4 +46,70 @@
   color: #666;
 }
 
-  
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #212121; 
+}  
+
+.filter-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: sticky;
+  top: 100px;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 767px) {
+  .filter-container {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+input.form-control, select.form-control {
+  border-radius: 10px;
+}
+
+.form-check-label {
+  font-size: 0.95rem;
+}
+
+.btn-link {
+  font-size: 0.9rem;
+}
+
+.input-icon {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: all 0.3s ease;
+  }
+
+  .search-input {
+    padding-left: 35px;
+    transition: all 0.3s ease;
+
+    &:focus + i {
+      color: #FF9800;
+      transform: translateY(-50%) scale(1.2);
+    }
+  }
+}
+
+.sort-select {
+  padding-left: 35px;
+  appearance: none; // para ocultar flecha nativa en algunos navegadores
+  background: none;
+}
+
+.input-icon i {
+  right: 12px;
+  left: auto;
+}
