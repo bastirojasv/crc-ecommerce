@@ -1,1 +1,0 @@
-import{Ra as o,Sa as r,Ya as a,_ as n,eb as i}from"./chunk-PSJPITZJ.js";var m=(()=>{class t{static{this.\u0275fac=function(e){return new(e||t)}}static{this.\u0275cmp=n({type:t,selectors:[["app-cart"]],standalone:!0,features:[i],decls:2,vars:0,template:function(e,s){e&1&&(o(0,"p"),a(1,"carrito works!"),r())}})}}return t})();export{m as CartComponent};

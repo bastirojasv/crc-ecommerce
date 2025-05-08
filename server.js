@@ -1,13 +1,18 @@
 const express = require('express');
-const port = process.env.PORT || 3000;
+const path = require('path');
 const app = express();
 
-app.use(express.static("public/dist"))
+const port = process.env.PORT || 3000;
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, '/../../public/dist/index.html'));
-})
+app.use(express.json());
 
-app.listen(port, function() {
-  console.log(`Server is running at port ${port}`);
+// Servir Angular desde /dist/crc-ecommerce/browser
+app.use(express.static(path.join(__dirname, 'dist/crc-ecommerce/browser')));
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/crc-ecommerce/browser', 'index.html'));
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
