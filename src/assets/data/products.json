@@ -4,7 +4,8 @@
     "name": "GUANTE MULTIFLEX ANTICORTE CUT GRIS THICK",
     "description": "El Guante Multiflex CUT 5 Gris está diseñado para proporcionar máxima protección contra cortes, alcanzando el nivel 5 según la norma EN 388. Su construcción avanzada con HPPE, fibra de vidrio, poliamida y elastano le otorgan una combinación de alta resistencia al corte, flexibilidad excepcional y gran comodidad.",
     "images": [
-      "image001.png"
+      "image001.png",
+      "imageTest01.png"
     ],
     "categoryId": 1
   },
