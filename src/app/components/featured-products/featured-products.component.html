@@ -3,7 +3,7 @@
     <div class="swiper-slide" *ngFor="let product of featuredProducts">
       <app-product-card 
         [product]="product" 
-        (viewProduct)="openProduct(product)">
+        (viewProduct)="viewDetails(product)">
       </app-product-card>
     </div>
   </div>

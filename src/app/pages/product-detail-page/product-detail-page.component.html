@@ -1,0 +1,25 @@
+<div class="container my-5" *ngIf="product">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        [src]="'assets/images/' + product.images[0]"
+        class="img-fluid rounded"
+        alt="{{ product.name }}"
+      />
+    </div>
+    <div class="col-md-6">
+      <h1 class="product-title">{{ product.name }}</h1>
+      <p class="product-description">{{ product.description }}</p>
+
+      <div class="collapse-box mt-4">
+        <div class="collapse-header d-flex justify-content-between align-items-center" (click)="toggleCollapse()">
+          <h4 class="mb-0">Especificación Técnica</h4>
+          <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-down' : 'fa-chevron-up'"></i>
+        </div>
+        <div class="collapse-body" [class.show]="!isCollapsed">
+          <p class="mt-3">{{ product.technicalDetails }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

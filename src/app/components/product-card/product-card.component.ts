@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -10,10 +11,12 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
-  @Input() product!: Product;
-  @Output() viewProduct = new EventEmitter<Product>();
 
-  emitViewProduct() {
-    this.viewProduct.emit(this.product);
+  constructor(private router: Router) { }
+  
+  @Input() product!: Product;  
+
+  goToDetails() {
+    this.router.navigate(['/product', this.product.id]);
   }
 }

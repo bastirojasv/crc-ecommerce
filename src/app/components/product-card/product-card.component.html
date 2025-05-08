@@ -3,7 +3,7 @@
     [src]="'assets/images/' + product.images[0]"
     class="card-img-top"
     [alt]="product.name"
-    (click)="emitViewProduct()"
+    (click)="goToDetails()"
   />
   <div class="card-body d-flex flex-column">
     <h5 class="card-title text-center">{{ product.name }}</h5>
@@ -12,5 +12,6 @@
     >
       Añadir al carrito
     </button>
+    <button class="btn btn-warning w-100 mt-2" (click)="goToDetails()">Ver más</button>
   </div>
 </div>

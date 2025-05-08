@@ -5,6 +5,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../../models/product.model';
 import Swiper from 'swiper/bundle'; 
 import 'swiper/css/bundle';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-featured-products',
@@ -18,7 +19,7 @@ export class FeaturedProductsComponent implements OnInit {
 
   featuredProducts: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
@@ -49,5 +50,9 @@ export class FeaturedProductsComponent implements OnInit {
 
   openProduct(product: Product) {
     this.productSelected.emit(product);
+  }
+
+  viewDetails(product: Product) {
+    this.router.navigate(['/product', product.id]);
   }
 }
