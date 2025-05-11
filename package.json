@@ -8,15 +8,15 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "postinstall": "ng build --configuration production",
-    "heroku-postbuild": "npm run build" 
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "20.15.0"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^18.0.6",
     "@angular/animations": "^18.0.0",
+    "@angular/cli": "^18.0.6",
     "@angular/common": "^18.0.0",
     "@angular/compiler": "^18.0.0",
     "@angular/core": "^18.0.0",
@@ -26,6 +26,7 @@
     "@angular/router": "^18.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
+    "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "swiper": "^11.2.6",

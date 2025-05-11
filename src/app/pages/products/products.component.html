@@ -107,13 +107,5 @@
 
 <div class="text-center my-3">
   Mostrando {{ startItem }} - {{ endItem }} de {{ filteredProducts.length }} productos
-</div>
-
-<app-product-detail
-    *ngIf="selectedProduct"
-    [product]="selectedProduct"
-    (closed)="closeProduct()"
->
-</app-product-detail>
-  
+</div> 
   

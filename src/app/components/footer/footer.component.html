@@ -10,7 +10,14 @@
         <div class="col-md-6">
           <form class="d-flex flex-column flex-md-row gap-2 justify-content-md-end">
             <input type="email" class="form-control" placeholder="Tu correo electrónico" [(ngModel)]="userEmail" name="email" required />
-            <button type="submit" class="btn btn-warning" (click)="handleSubmit()">Enviar</button>
+            <button
+              type="submit"
+              class="btn btn-warning d-flex align-items-center justify-content-center"
+              [disabled]="!userEmail || isLoading || !emailIsValid(userEmail)"
+              (click)="handleSubmit()">
+              <span *ngIf="!isLoading">Enviar</span>
+              <span *ngIf="isLoading" class="spinner-border spinner-border-sm text-light" role="status"></span>
+            </button>
           </form>
         </div>
   

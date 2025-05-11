@@ -1,0 +1,58 @@
+.toast-container {
+    position: fixed !important;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1200;
+}
+
+.toast {
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    max-width: 320px;
+    animation: slideFadeIn 0.4s ease-out;
+}
+  
+@keyframes slideFadeIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+.toast.fade-out {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+  
+.slide-in {
+    animation: slideFadeIn 0.4s ease-out forwards;
+}
+
+:host {
+  display: block;
+  // padding: 2rem 1rem;
+  // max-width: 1280px;
+  // margin: 0 auto;
+}  
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.flex-fill {
+  flex: 1;
+}

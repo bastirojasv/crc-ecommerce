@@ -19,10 +19,4 @@
   <div class="row">
     <app-featured-products (productSelected)="openProduct($event)"></app-featured-products>
   </div>
-
-  <app-product-detail
-    *ngIf="selectedProduct"
-    [product]="selectedProduct"
-    (closed)="closeProduct()"
-  ></app-product-detail>
 </div>

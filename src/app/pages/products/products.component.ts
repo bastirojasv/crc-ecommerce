@@ -1,17 +1,18 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { CommonModule } from '@angular/common';
-import { ProductDetailComponent } from '../../components/product-detail/product-detail.component';
 import { Category, CategoryService } from '../../services/category.service';
 import { FormsModule } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule, ProductDetailComponent, FormsModule],
+  imports: [ProductCardComponent, CommonModule, FormsModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
@@ -26,8 +27,7 @@ export class ProductsComponent {
   sortOption: string = '';
   selectedCategories: number[] = [];
 
-  categories: Category[] = []; // Asumiendo que ya tienes las categorías cargadas
-
+  categories: Category[] = []; 
 
   currentPage: number = 1;
   itemsPerPage: number = 9;
@@ -38,13 +38,19 @@ export class ProductsComponent {
 
   currentCategoryName: string = '';
 
+  isMobile = false;
+
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
     private categoryService: CategoryService,
+    private titleService: Title
   ) {} 
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('Productos | CRC Comercial SPA');
+
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
       this.route.queryParams.subscribe(params => {
@@ -63,6 +69,8 @@ export class ProductsComponent {
           this.filteredProducts = this.products;
           this.currentCategoryName = 'Todos los Productos';
         }
+
+        this.isMobile = window.innerWidth < 768;
   
         this.updatePaginatedProducts();
       });
@@ -81,6 +89,7 @@ export class ProductsComponent {
   // Pagination logic
 
   updatePaginatedProducts(): void {
+    const pagesToShow = this.isMobile ? 3 : 5;
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
 
@@ -103,7 +112,7 @@ export class ProductsComponent {
   get visiblePages(): number[] {
     const total = this.totalPages;
     const current = this.currentPage;
-    const range = 5; // mostrar 5 números
+    const range = this.isMobile ? 3 : 5;
   
     let start = Math.max(current - Math.floor(range / 2), 1);
     let end = start + range - 1;
@@ -185,7 +194,17 @@ export class ProductsComponent {
     this.sortOption = '';
     this.selectedCategories = [];
     this.applyFilters();
+  } 
+
+  @HostListener('window:resize', [])
+  onResize() {
+    const wasMobile = this.isMobile;
+    this.isMobile = window.innerWidth < 768;
+
+    if (wasMobile !== this.isMobile) {
+      // Cambió el tamaño de dispositivo, recalcular páginas visibles
+      this.updatePaginatedProducts();
+    }
   }
-  
-  
+
 }

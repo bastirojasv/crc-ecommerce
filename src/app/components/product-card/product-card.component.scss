@@ -6,7 +6,8 @@
   background: #ffffff;
   transition: all 0.3s ease;
   cursor: pointer;
-  
+  border-radius: 12px;
+
   &:hover {
       border: 1px solid #f4a300;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -50,4 +51,111 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-  
+
+.btn-outline-warning {
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.quantity-input {
+  width: 70px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+}
+
+// Oculta el input de cantidad en pantallas pequeñas
+@media (max-width: 767.98px) {
+  .quantity-input {
+    display: none;
+  }
+}
+
+.product-card {
+  background-color: transparent; // quita ese fondo blanco innecesario
+  border: none;
+  box-shadow: none;
+  padding: 0;
+
+  .product-image {
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  .product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // mostrar solo 2 líneas
+    -webkit-box-orient: vertical;
+  }
+
+  .quantity-selector {
+    max-width: 72px;
+    min-width: 60px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 0.9rem;
+    height: 38px;
+  }
+
+  &:hover {
+    border: 1px solid #f4a300;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+  }
+}
+
+// .product-image {
+//   max-height: 180px;
+//   object-fit: contain;
+// }
+
+// .product-title {
+//   font-size: 15px;
+//   font-weight: 600;
+//   text-transform: uppercase;
+// }
+
+// .quantity-selector {
+//   width: 100%;
+//   border-radius: 8px;
+//   padding: 8px;
+//   border: 1px solid #ccc;
+//   font-weight: 500;
+//   font-size: 14px;
+// }
+
+.btn-orange {
+  background-color: #ff9800;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: auto;
+
+  &:hover {
+    background-color: #e68900;
+  }
+}
+
+.text-orange {
+  color: #ff9800;
+}
+
+.product-image {
+  height: 160px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 8px;
+  display: block;
+}

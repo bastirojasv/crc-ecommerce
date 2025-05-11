@@ -21,12 +21,15 @@
         </li>
       </ul>
 
-      <a class="btn btn-outline-light position-relative" routerLink="/cart">
-        🛒 Carrito
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          0
-        </span>
-      </a>
+    <a routerLink="/cart" class="position-relative me-3">
+      <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>
+      <span
+        *ngIf="totalItems > 0"
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+        {{ totalItems }}
+      </span>
+    </a>
+      
     </div>
   </div>
 </nav>

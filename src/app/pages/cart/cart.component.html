@@ -1,1 +1,93 @@
-<p>carrito works!</p>
+<div *ngIf="cartItems.length === 0" class="empty-cart text-center py-5">
+  <div class="emoji mb-3">🛒</div>
+  <h3 class="mb-3">Tu carrito está vacío</h3>
+  <p class="text-muted mb-4">Agrega productos para enviar tu solicitud de compra.</p>
+  <a routerLink="/products" class="btn btn-warning px-4">
+    Ir al catálogo
+  </a>
+</div>
+
+<div *ngIf="cartItems.length > 0">
+  <div class="container my-5">
+    <h2 class="mb-4">Resumen de tu pedido</h2>
+  
+    <div class="row">
+      <!-- 🛒 Lista de productos -->
+      <div class="col-md-8">
+        <div *ngFor="let item of cartItems" class="cart-item card mb-3">
+          <div class="row g-0 align-items-center p-2">
+            <div class="col-md-2 text-center">
+              <img [src]="'assets/images/' + item.product.images[0]"
+                   class="img-fluid" [alt]="item.product.name" />
+            </div>
+            <div class="col-md-6">
+              <h5 class="mb-2">{{ item.product.name }}</h5>
+              <input type="number"
+                     min="1"
+                     [(ngModel)]="item.quantity"
+                     (change)="updateQuantity(item.product.id, item.quantity)"
+                     class="form-control form-control-sm quantity-input" />
+            </div>
+            <div class="col-md-4 text-end">
+              <button class="btn btn-link text-danger" (click)="remove(item.product.id)">
+                <i class="fas fa-trash-alt me-1"></i> Quitar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 📋 Formulario -->
+      <div class="col-md-4">
+        <div class="summary-box card p-4">
+          <h5 class="mb-3">Datos de contacto</h5>
+          <form #contactForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+
+            <div class="mb-2">
+              <label class="form-label">Nombre</label>
+              <input type="text"
+                    class="form-control"
+                    name="name"
+                    [(ngModel)]="contact.name"
+                    #name="ngModel"
+                    required />
+              <div *ngIf="name.invalid && name.touched" class="text-danger small mt-1">
+                El nombre es obligatorio.
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Correo electrónico</label>
+              <input type="email"
+                    class="form-control"
+                    name="email"
+                    [(ngModel)]="contact.email"
+                    #email="ngModel"
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+              <div *ngIf="email.invalid && email.touched" class="text-danger small mt-1">
+                Ingresa un correo válido.
+              </div>            
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Empresa (opcional)</label>
+              <input type="text" class="form-control" [(ngModel)]="contact.company" name="company" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Comentario</label>
+              <textarea class="form-control" rows="4" [(ngModel)]="contact.message" name="message"></textarea>
+            </div>
+            
+            <button class="btn btn-warning w-100" type="submit" [disabled]="!contactForm.valid">
+              Enviar solicitud
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  
