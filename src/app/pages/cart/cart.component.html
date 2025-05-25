@@ -80,9 +80,15 @@
               <textarea class="form-control" rows="4" [(ngModel)]="contact.message" name="message"></textarea>
             </div>
             
-            <button class="btn btn-warning w-100" type="submit" [disabled]="!contactForm.valid">
-              Enviar solicitud
+            <button
+              class="btn btn-warning w-100 d-flex align-items-center justify-content-center"
+              type="submit"
+              [disabled]="!contactForm.valid || isLoading">
+
+              <span *ngIf="!isLoading">Enviar solicitud</span>
+              <span *ngIf="isLoading" class="spinner-border spinner-border-sm text-light" role="status"></span>
             </button>
+
 
           </form>
         </div>

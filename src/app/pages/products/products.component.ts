@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule, FormsModule],
+  imports: [ProductCardComponent, CommonModule, FormsModule, RouterModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })

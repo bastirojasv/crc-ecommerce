@@ -11,7 +11,18 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
+  // This method will change when we have a real API
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl);
   }
+
+  // This method will change when we have a real API
+  getProductsByCategoryId(categoryId: number): Product[] {
+    let products: Product[] = [];
+    this.getProducts().subscribe(data => {
+      products = data.filter(product => product.categoryId === categoryId);
+    });
+    return products;
+  }
+
 }

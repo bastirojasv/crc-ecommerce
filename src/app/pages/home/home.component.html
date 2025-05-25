@@ -1,4 +1,8 @@
-<h2 class="my-5">NUESTROS DESTACADOS</h2>
+<div class="section-title text-center my-5">
+  <h2 class="fw-bold text-uppercase">✨ Nuestros Destacados</h2>
+  <hr class="mx-auto" style="width: 60px; border: 2px solid #fce434;" />
+</div>
+
 
 <div class="swiper carrousel-swiper">
   <div class="swiper-wrapper">
@@ -14,9 +18,29 @@
   <div class="swiper-pagination"></div>
 </div>
 
+<p *ngIf="featuredProductsCarousel.length === 0" class="text-muted text-center">No hay productos para esta categoría.</p>
+
 <div class="container">
-  <h2 class="my-5">SEGURIDAD INDUSTRIAL</h2>
   <div class="row">
-    <app-featured-products (productSelected)="openProduct($event)"></app-featured-products>
+    <app-featured-products
+      [categoryId]="1"
+      [categoryTitle]="'Seguridad Industrial'"
+      (productSelected)="openProduct($event)">
+    </app-featured-products>  
   </div>
 </div>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">MARCAS QUE CONFIAN EN NOSOTROS</h2>
+  <div class="row justify-content-center align-items-center brands-grid text-center">
+    <div class="col-6 col-md-3 col-lg-2 mb-4" *ngFor="let brand of brands">
+      <a [href]="brand.link" target="_blank" rel="noopener noreferrer">
+        <div class="brand-wrapper">
+          <img [src]="brand.img" [alt]="brand.name" class="brand-logo" />
+        </div>
+      </a>
+      <p class="brand-name text-muted small">{{ brand.name }}</p>
+    </div>
+  </div>
+</div>
+

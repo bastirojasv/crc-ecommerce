@@ -1,14 +1,19 @@
-<div class="swiper featured-swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let product of featuredProducts">
-      <app-product-card 
-        [product]="product" 
+<div class="product-carousel-container">
+  <h2 class="section-title text-center text-uppercase fw-bold">
+    {{ categoryTitle }}
+  </h2>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" (click)="scrollLeft()"><i class="fas fa-chevron-left"></i></button>
+
+    <div class="product-carousel" #carousel>
+      <app-product-card
+        *ngFor="let product of featuredProducts"
+        [product]="product"
         (viewProduct)="viewDetails(product)">
       </app-product-card>
     </div>
+
+    <button class="carousel-btn right" (click)="scrollRight()"><i class="fas fa-chevron-right"></i></button>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
 </div>
-
-

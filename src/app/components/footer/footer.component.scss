@@ -23,13 +23,13 @@ footer {
   }
 
   .btn-warning {
-    background-color: #ff9800;
+    background-color: #fce434;
     border: none;
     color: #fff;
   }
 
   .btn-warning:hover {
-    background-color: #e88b00;
+    background-color: #e0c100;
   }
 
   hr {
@@ -40,3 +40,23 @@ footer {
     margin-bottom: 0;
   }
 }
+
+.termofusion-banner {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  h6 {
+    color: #fce434;
+  }
+
+  a.btn {
+    font-weight: 500;
+    border-radius: 30px;
+  }
+
+  // img {
+  //   filter: brightness(0) invert(1); // blanco si fondo oscuro
+  // }
+}
+

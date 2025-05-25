@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../../models/product.model';
-import Swiper from 'swiper/bundle'; 
 import 'swiper/css/bundle';
 import { Router } from '@angular/router';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-featured-products',
@@ -15,37 +15,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./featured-products.component.scss']
 })
 export class FeaturedProductsComponent implements OnInit {
+
   @Output() productSelected = new EventEmitter<Product>();
+  @ViewChild('carousel', { static: false }) carousel!: ElementRef;
+  @Input() categoryId!: number;
+  @Input() categoryTitle: string = 'Productos';
 
   featuredProducts: Product[] = [];
 
   constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((products) => {
-      this.featuredProducts = [...products]
-        .sort(() => 0.8 - Math.random())
-        .slice(0, 8);
-
-      this.initSwiper();
-    });
+    if (this.categoryId != null) {
+      const productsByCategory = this.productService.getProductsByCategoryId(this.categoryId);
+      this.featuredProducts = [...productsByCategory]
+        .sort(() => 0.9 - Math.random())
+        .slice(0, 9);
+    } else {
+      console.log('No category ID provided');
+    }
   }
 
-  initSwiper(): void {
-    const swiper = new Swiper(".featured-swiper", {
-      slidesPerView: 'auto',
-      slidesPerGroupSkip: 2,
-      breakpoints: {
-        769: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+  // Navigation methods
+  scrollLeft() {
+    this.carousel.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
+  scrollRight() {
+    this.carousel.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
 
   openProduct(product: Product) {

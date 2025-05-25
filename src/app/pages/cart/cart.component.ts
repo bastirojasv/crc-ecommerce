@@ -19,6 +19,7 @@ export class CartComponent {
   
   templateId = 'template_yy1qxjq';
   cartItems: CartItem[] = [];
+  isLoading = false;
 
   contact = {
     name: '',
@@ -44,6 +45,10 @@ export class CartComponent {
 
   submitForm(): void {
 
+    if (!this.contact.name || !this.contact.email) return;
+
+    this.isLoading = true;
+
     const templateParams = {
       name: this.contact.name,
       email: this.contact.email,
@@ -54,13 +59,19 @@ export class CartComponent {
 
     this.emailService.sendTemplate(this.templateId, templateParams)
       .then(() => {
+
+        this.isLoading = false;
+
         const modal = new bootstrap.Modal(document.getElementById('successModal'));
+
         modal.show();
+
         this.cartService.clearCart();
         this.contact = { name: '', email: '', company: '', message: '' };
       })
-      .catch(err => {
-        console.error('Error al enviar el correo:', err);
+      .catch(() => {
+        this.isLoading = false;
+
         alert('Hubo un error al enviar tu solicitud. Intenta más tarde.');
       });
   }

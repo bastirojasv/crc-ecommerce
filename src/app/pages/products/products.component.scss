@@ -9,14 +9,14 @@
 
     .page-link {
       background-color: white;
-      border: 2px solid #FF9800;
-      color: #FF9800;
+      border: 2px solid #fce434;
+      color: #fce434;
       border-radius: 50px;
       padding: 8px 16px;
       transition: background-color 0.3s ease, transform 0.2s ease;
 
       &:hover {
-        background-color: #FF9800;
+        background-color: #fce434;
         color: white;
         transform: scale(1.05);
       }
@@ -27,7 +27,7 @@
     }
 
     &.active .page-link {
-      background-color: #FF9800;
+      background-color: #fce434;
       color: white;
       font-weight: bold;
       transform: scale(1.1);
@@ -43,6 +43,15 @@
 
 .text-center {
   font-size: 0.9rem;
+  color: #666;
+}
+
+.text-center h3 {
+  font-weight: 600;
+}
+
+.text-center p {
+  font-size: 15px;
   color: #666;
 }
 
@@ -100,7 +109,7 @@ input.form-control, select.form-control {
 
   /* Animación manual basada en focus */
   &.focused i {
-    color: #FF9800;
+    color: #fce434;
     transform: translateY(-50%) scale(1.2);
   }
 }
@@ -114,4 +123,15 @@ input.form-control, select.form-control {
 .input-icon i {
   right: 12px;
   left: auto;
+}
+
+.btn-outline-warning {
+  color: #e0c100;
+  border-color: #e0c100;
+}
+
+.btn-outline-warning:hover {
+    background-color: #fce434;
+    border: none;
+    color: #fff;
 }

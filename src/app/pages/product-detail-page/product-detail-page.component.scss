@@ -76,7 +76,7 @@
   }
 
   .thumb-image.active {
-    border: 2px solid #FF9800;
+    border: 2px solid #fce434;
   }
 
   @media (max-width: 768px) {
@@ -105,5 +105,26 @@
   .btn-pulse {
     animation: pulse 0.3s ease;
   }
-
 }
+
+.btn-outline-warning {
+  color: #e0c100;
+  border-color: #e0c100;
+}
+
+.btn-outline-warning:hover {
+    background-color: #fce434;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning {
+  background-color: #fce434;
+  border: none;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background-color: #e0c100;
+}
+
