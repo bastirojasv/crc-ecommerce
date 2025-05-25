@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/product.model';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
   private productsUrl = 'assets/data/products.json'; // URL to web API
+
+  products: Product[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -17,12 +20,10 @@ export class ProductService {
   }
 
   // This method will change when we have a real API
-  getProductsByCategoryId(categoryId: number): Product[] {
-    let products: Product[] = [];
-    this.getProducts().subscribe(data => {
-      products = data.filter(product => product.categoryId === categoryId);
-    });
-    return products;
+  getProductsByCategoryId(categoryId: number): Observable<Product[]> {
+    return this.getProducts().pipe(
+      map(products => products.filter(product => product.categoryId === categoryId))
+    );
   }
 
 }

@@ -56,19 +56,42 @@
 }
 
 .category-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #212121; 
-}  
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-left: 10px;
+}
 
 .filter-container {
-  background-color: #ffffff;
+  background: #fff;
   border: 1px solid #ddd;
-  border-radius: 12px;
-  position: sticky;
-  top: 100px;
-  background-color: #f9f9f9;
+  padding-left: 1.5rem;
+  position: relative;
+  border-radius: 0.5rem;
+
+  .form-check {
+    padding-left: 1.5rem;
+    position: relative;
+
+    .form-check-input {
+      position: relative;
+      left: 0;
+      top: 0.5rem;
+    }
+
+    .form-check-label {
+      font-size: 0.95rem;
+      top: 0.5rem;
+      position: relative;
+      color: #333;
+    }
+  }
+
+  .form-check + .form-check {
+    margin-top: 0.5rem;
+  }
 }
+
 
 @media (max-width: 767px) {
   .filter-container {
@@ -80,11 +103,6 @@
 input.form-control, select.form-control {
   border-radius: 10px;
 }
-
-.form-check-label {
-  font-size: 0.95rem;
-}
-
 .btn-link {
   font-size: 0.9rem;
 }
@@ -134,4 +152,18 @@ input.form-control, select.form-control {
     background-color: #fce434;
     border: none;
     color: #fff;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+.col-lg-3 {
+  padding: 0 10px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

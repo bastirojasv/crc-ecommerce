@@ -59,13 +59,9 @@ export class CartComponent {
 
     this.emailService.sendTemplate(this.templateId, templateParams)
       .then(() => {
-
         this.isLoading = false;
-
         const modal = new bootstrap.Modal(document.getElementById('successModal'));
-
         modal.show();
-
         this.cartService.clearCart();
         this.contact = { name: '', email: '', company: '', message: '' };
       })

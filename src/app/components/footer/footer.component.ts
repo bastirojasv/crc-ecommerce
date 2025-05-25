@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from '../../services/email.service';
+import { RouterModule } from '@angular/router';
 
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, FormsModule, CommonModule],
+  imports: [CommonModule, FormsModule, CommonModule, RouterModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

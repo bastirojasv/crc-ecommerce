@@ -1,26 +1,16 @@
-<div class="section-title text-center my-5">
-  <h2 class="fw-bold text-uppercase">✨ Nuestros Destacados</h2>
-  <hr class="mx-auto" style="width: 60px; border: 2px solid #fce434;" />
-</div>
-
-
 <div class="swiper carrousel-swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let product of featuredProductsCarousel">
+    <div class="swiper-slide" *ngFor="let image of images">
       <img
-        [src]="'assets/images/' + product.images[0]"
+        [src]="'assets/images/carrousel/' + image"
         class="img-fluid rounded"
-        alt="{{ product.name }}"
       />
     </div>
-    
   </div>
   <div class="swiper-pagination"></div>
 </div>
 
-<p *ngIf="featuredProductsCarousel.length === 0" class="text-muted text-center">No hay productos para esta categoría.</p>
-
-<div class="container">
+<div class="container featured-products">
   <div class="row">
     <app-featured-products
       [categoryId]="1"

@@ -30,7 +30,7 @@ export class ProductsComponent {
   categories: Category[] = []; 
 
   currentPage: number = 1;
-  itemsPerPage: number = 9;
+  itemsPerPage: number = 12;
   paginatedProducts: Product[] = [];
 
   products: Product[] = [];
@@ -51,32 +51,41 @@ export class ProductsComponent {
 
     this.titleService.setTitle('Productos | CRC Comercial SPA');
 
+    this.categoryService.getCategories().subscribe(categories => {
+      this.categories = categories;
+    });
+    this.filteredProducts = [...this.products];
+    this.updatePaginatedProducts();
+
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
       this.route.queryParams.subscribe(params => {
         const categoryId = +params['category'];
-  
+
         if (categoryId) {
+          // Marcar la categoría en el filtro
+          this.selectedCategories = [categoryId];
+
           this.filteredProducts = this.products.filter(p => p.categoryId === categoryId);
-  
+
           // Buscar el nombre de la categoría
           this.categoryService.getCategories().subscribe(categories => {
             const found = categories.find(c => c.id === categoryId);
             this.currentCategoryName = found ? found.name : 'Productos';
           });
-  
+
         } else {
+          this.selectedCategories = [];
           this.filteredProducts = this.products;
           this.currentCategoryName = 'Todos los Productos';
         }
 
         this.isMobile = window.innerWidth < 768;
-  
+
         this.updatePaginatedProducts();
       });
     });
   }
-  
 
   openProduct(product: Product) {
     this.selectedProduct = product;

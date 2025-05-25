@@ -11,8 +11,18 @@ export interface CartItem {
   providedIn: 'root'
 })
 export class CartService {
-  private items: CartItem[] = [];
-  private cart$ = new BehaviorSubject<CartItem[]>([]);
+  private CART_KEY = 'crc_cart';
+  private items: CartItem[] = this.loadCartFromStorage();
+  private cart$ = new BehaviorSubject<CartItem[]>(this.items);
+
+  private saveCartToStorage(cart: CartItem[]): void {
+    localStorage.setItem(this.CART_KEY, JSON.stringify(cart));
+  }
+
+  private loadCartFromStorage(): CartItem[] {
+    const data = localStorage.getItem(this.CART_KEY);
+    return data ? JSON.parse(data) : [];
+  }
 
   getCart() {
     return this.cart$.asObservable();
@@ -29,12 +39,14 @@ export class CartService {
     } else {
       this.items.push({ product, quantity });
     }
-    this.cart$.next(this.items);
+    this.saveCartToStorage(this.items);
+    this.cart$.next([...this.items]);
   }
 
   removeFromCart(productId: number): void {
     this.items = this.items.filter(item => item.product.id !== productId);
-    this.cart$.next(this.items);
+    this.saveCartToStorage(this.items);
+    this.cart$.next([...this.items]);
   }
 
   updateQuantity(productId: number, quantity: number): void {
@@ -43,12 +55,15 @@ export class CartService {
       item.quantity = quantity;
     } else if (item && quantity === 0) {
       this.removeFromCart(productId);
+      return;
     }
-    this.cart$.next(this.items);
+    this.saveCartToStorage(this.items);
+    this.cart$.next([...this.items]);
   }
 
   clearCart(): void {
     this.items = [];
+    this.saveCartToStorage(this.items);
     this.cart$.next([]);
   }
 }

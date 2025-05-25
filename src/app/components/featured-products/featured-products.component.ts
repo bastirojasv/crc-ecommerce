@@ -27,10 +27,11 @@ export class FeaturedProductsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.categoryId != null) {
-      const productsByCategory = this.productService.getProductsByCategoryId(this.categoryId);
-      this.featuredProducts = [...productsByCategory]
-        .sort(() => 0.9 - Math.random())
-        .slice(0, 9);
+      this.productService.getProductsByCategoryId(this.categoryId).subscribe(productsByCategory => {
+        this.featuredProducts = [...productsByCategory]
+          .sort(() => 0.9 - Math.random())
+          .slice(0, 9);
+      });
     } else {
       console.log('No category ID provided');
     }

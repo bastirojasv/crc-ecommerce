@@ -5,11 +5,11 @@
 }
   
 img {
-    max-height: 80px;
-    object-fit: contain;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 6px;
+  max-height: 80px;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 6px;
 }
 
 input[type='number'] {
@@ -26,29 +26,29 @@ input[type='number'] {
 }
 
 .total-card {
-    border-radius: 12px;
-    background-color: #fffbe6;
-    border: 1px solid #ffecb3;
-    box-shadow: 0 0 5px rgba(255, 152, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fffbe6;
+  border: 1px solid #ffecb3;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.1);
 
-    h4 {
-        font-size: 1.25rem;
-        color: #fce434;
-    }
+  h4 {
+      font-size: 1.25rem;
+      color: #fce434;
+  }
 
-    .btn {
-        margin-top: 1rem;
-        border-radius: 25px;
-    }
+  .btn {
+      margin-top: 1rem;
+      border-radius: 25px;
+  }
 }
 
 input, textarea {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .modal-content {
-    border-radius: 16px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
 .empty-cart {

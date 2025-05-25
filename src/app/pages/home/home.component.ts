@@ -16,8 +16,15 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   selectedProduct?: Product;
-  featuredProductsCarousel: Product[] = [];
+  images: string[] = [
+    'img1.jpg',
+    'img2.jpg',
+    'img3.jpg',
+    'img4.jpg',
+    'img5.jpg',
+  ];
 
+  featuredProductsCarousel: Product[] = [];
   brands = [
     {
       name: 'Safety',
@@ -65,11 +72,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     this.titleService.setTitle('Inicio | CRC Comercial SPA');
 
-    this.productService.getProducts().subscribe((products) => {
-      this.featuredProductsCarousel = [...products]
-        .sort(() => 0.8 - Math.random())
-        .slice(0, 8);
-    });
+    // this.productService.getProducts().subscribe((products) => {
+    //   this.featuredProductsCarousel = [...products]
+    //     .sort(() => 0.8 - Math.random())
+    //     .slice(0, 8);
+    // });
   }
 
   openProduct(product: Product) {
