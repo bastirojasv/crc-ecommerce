@@ -21,7 +21,7 @@
 
 .brand-wrapper {
   width: 100%;
-  height: 60px;
+  height: 90px; // Aumenta el alto del contenedor
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,20 +29,20 @@
 }
 
 .brand-logo {
-  max-height: 100%;
-  max-width: 100%;
+  width: 150px;      // Aumenta el ancho
+  height: 80px;      // Aumenta el alto
+  max-width: 150px;
+  max-height: 80px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.07));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
-}
-
-.brand-name {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
 }
 
 :host ::ng-deep app-featured-products app-product-card .product-card-container {
@@ -55,11 +55,96 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+  }
 
-.featured-products {
+  .featured-products {.marcas-box {
+    border: 3px solid #ffc107;
+    border-radius: 16px;
+    background: #fffbe6;
+    padding: 32px 16px;
+  }
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+}
+
+.marcas-box {
+  // border: 3px solid #ffc107; // Quitar el contorno amarillo
+  border-radius: 18px;
+  background: #111; // Fondo negro
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18); // Sombra más notoria
+  padding: 40px 20px;
+}
+
+.brand-bg {
+  background: transparent;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+}
+
+.brand-bg:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(255,193,7,0.15);
+}
+
+.marcas-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff; // Letras blancas
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 18px;
+
+  // Subrayado decorativo
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 80px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ffc107;
+    box-shadow: 0 2px 8px rgba(255,193,7,0.18);
+  }
+}
+
+.brand-logo {
+  width: 100px;
+  height: 60px;
+  max-width: 100px;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.07));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.brand-name {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #fff; // Letras blancas para los nombres de marca
+}
+
+.marcas-icon {
+  color: #ffc107;
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin: 0 8px;
 }

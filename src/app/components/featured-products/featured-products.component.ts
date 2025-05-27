@@ -14,7 +14,7 @@ import { ViewChild, ElementRef } from '@angular/core';
   templateUrl: './featured-products.component.html',
   styleUrls: ['./featured-products.component.scss']
 })
-export class FeaturedProductsComponent implements OnInit {
+export class FeaturedProductsComponent implements OnInit {  
 
   @Output() productSelected = new EventEmitter<Product>();
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;

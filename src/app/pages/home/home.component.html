@@ -20,16 +20,20 @@
   </div>
 </div>
 
-<div class="container my-5">
-  <h2 class="text-center mb-4">MARCAS QUE CONFIAN EN NOSOTROS</h2>
+<div class="container my-5 marcas-box">
+  <h2 class="text-center mb-4 marcas-title">
+    <span class="marcas-icon">★</span>
+    MARCAS QUE CONFIAN EN NOSOTROS
+    <span class="marcas-icon">★</span>
+  </h2>
   <div class="row justify-content-center align-items-center brands-grid text-center">
     <div class="col-6 col-md-3 col-lg-2 mb-4" *ngFor="let brand of brands">
-      <a [href]="brand.link" target="_blank" rel="noopener noreferrer">
-        <div class="brand-wrapper">
+      <a target="_blank" rel="noopener noreferrer">
+        <div class="brand-wrapper brand-bg">
           <img [src]="brand.img" [alt]="brand.name" class="brand-logo" />
         </div>
       </a>
-      <p class="brand-name text-muted small">{{ brand.name }}</p>
+      <p class="brand-name">{{ brand.name }}</p>
     </div>
   </div>
 </div>

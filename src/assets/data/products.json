@@ -4,8 +4,7 @@
     "name": "GUANTE MULTIFLEX ANTICORTE CUT GRIS THICK",
     "description": "El Guante Multiflex CUT 5 Gris está diseñado para proporcionar máxima protección contra cortes, alcanzando el nivel 5 según la norma EN 388. Su construcción avanzada con HPPE, fibra de vidrio, poliamida y elastano le otorgan una combinación de alta resistencia al corte, flexibilidad excepcional y gran comodidad.",
     "images": [
-      "image001.png",
-      "imageTest01.png"
+      "image001.png"
     ],
     "categoryId": 1
   },
@@ -2698,6 +2697,83 @@
     "images": [
       "image300.png"
     ],
+    "categoryId": 1
+  },
+    {
+    "id": 301,
+    "name": "GUANTE HEAVY DUTY TEJIDO",
+    "description": "• Guante con soporte interior de algodón.\n• Recubrimiento completo de Nitrilo liso.\n• Puño tejido de algodón.\n• Excelente resistencia a la abrasión, rasgadura, aceites y grasas.\n• Ideal para trabajos medio o pesados.\n• Recomendado para minería, mecánica, construcción, industria en general.\n• Talla 9.\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "301_1.png",
+      "301_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 302,
+    "name": "GUANTE ANTICORE PALMA PU",
+    "description": "• Palma recubierta en Poliuretano.\n• Puño elástico.\n• Ideal para aplicaciones en seco o ligeramente húmedas.\n• Ergonómico, ajuste natural para un mejor confort.\n• Gran nivel de destreza, sensibilidad y motricidad para el manejo de piezas pequeñas.\n• Tallas 8, 9, 10.\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.\n\n<table border='1'><tr><th>Tallas</th><th>Códigos</th></tr><tr><td>8</td><td>1020</td></tr><tr><td>9</td><td>1019</td></tr><tr><td>10</td><td>1018</td></tr></table>",
+    "images": [
+      "302_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 303,
+    "name": "CONO REFLECTANTE DE 28\" REDDER",
+    "description": "• Fabricado en PVC, flexible y de alta resistencia a los rayos UV.\n• Doble cinta reflectante diamantada de 2”.\n• Base cuadrada.\n• 28” de altura, equivalente a 71,10 cm.\n• Fácil de instalar, mover y apilar.\n• Cumple con el capítulo Nº5 del manual de señalización transitoria y medidas de seguridad para trabajos en vías, calles o recintos cerrados.\n• Ideal para delimitar tránsito vehicular o peatonal en calles, estacionamientos, colegios, universidades e industria en general.",
+    "images": [
+      "303_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 304,
+    "name": "CONO REFLECTANTE BASE PESADA DE 28\" CON BASE PESADA",
+    "description": "• Base pesada de 35 x 35 cm\n• Doble cinta reflectante diamantada para una mayor visibilidad de 2\"\n• Base negra pesada para mayor resistencia a vientos laterales 28\" (71.1 cm)\n• Doble base extra pesada\n• Fácil de instalar, mover, trasladar, apilar\n• Resistente a diferentes condiciones climáticas, impactos y aplastamiento\n• Cumple norma MOP\n• Ideal para delimitar tránsito vehicular o peatonal en calles, estacionamientos, colegios, universidades e industria en general.",
+    "images": [
+      "304_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 305,
+    "name": "CONO REFLECTANTE DE 36\" REDDER",
+    "description": "• Base cuadrada de 36 x 36 cm.\n• Doble cinta reflectante de alta visibilidad diamantadas de 2”.\n• Excelente flexibilidad y resistencia a los rayos UV.\n• Fácil de instalar, mover, trasladar y apilar.\n• Ideal para delimitar tránsito vehicular en sectores de baja velocidad o peatonal en calle, estacionamientos públicos o privados e industria en general.\n• Ideal para delimitar tránsito vehicular en calles, estacionamientos, colegios, universidades e industrias en general.",
+    "images": [
+      "305_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 306,
+    "name": "CONO REFLECTANTE BASE PESADA DE 36\" REDDER",
+    "description": "• Fabricado en PVC, flexible y alta resistencia a los rayos UV.\n• Doble cinta reflectante diamantada de 2”.\n• Base pesada cuadrada antiviento.\n• Mayor resistencia a vientos laterales.\n• 36” de altura, equivalente a 91,44 cm.\n• Fácil de instalar y apilar.\n• Cumple con el capítulo Nº 5 del manual de señalizaciones transitoria y medidas de seguridad para trabajos en vías o recintos cerrados.\n• Ideal para delimitar tránsito vehicular en calles, estacionamientos, colegios, universidades e industrias en general.",
+    "images": [
+      "306_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 307,
+    "name": "CONO REFLECTANTE DE 18\" REDDER",
+    "description": "• Fabricado en PVC flexible y alta resistencia a los rayos UV\n• Cinta reflectante diamantada de 2\"\n• 18” de altura, equivalente a 45,72 cm.\n• Fácil de instalar, mover y apilar\n• Base cuadrada\n• Cumple con el capítulo Nº5 del manual de señalizaciones transitoria y medidas de seguridad para trabajos en vías, calles o recintos cerrados.\n• Ideal para delimitar tránsito vehicular o peatonal en calles, estacionamientos, colegios, universidades e industrias en general.",
+    "images": [
+      "307_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 308,
+    "name": "BARRAS CONECTORAS",
+    "description": "• Material: PVC\n• Peso: 0,40kg Aprox.\n• Dimensiones: Ajustable de 130 a 210 cm. Diámetro 35mm.\n• Anclajes: Argollas plásticas en extremos para conos u otro dispositivo vial.\n• Para delimitar perimetralmente sectores que se necesiten aislar de tráfico o personas para sectores de peligro inminente o trabajos, como por ejemplo: obras en construcción, trabajos viales o para aislar a personas en sectores donde se requiera.\n\n<table border='1'><tr><th>Color</th><th>Código</th></tr><tr><td>Amarillo-Negro</td><td>15001001</td></tr><tr><td>Blanco-Rojo</td><td>15001002</td></tr></table>",
+    "images": [
+      "308_1.png",
+      "308_2.png",
+      "308_3.png",
+      "308_4.png"
+    ]
+    ,
     "categoryId": 1
   }
 ]
