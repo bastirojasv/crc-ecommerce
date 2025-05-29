@@ -14,16 +14,16 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  // This method will change when we have a real API
+  // Agrega un query string para evitar caché
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl);
+    const url = `${this.productsUrl}?v=${Date.now()}`;
+    return this.http.get<Product[]>(url);
   }
 
-  // This method will change when we have a real API
   getProductsByCategoryId(categoryId: number): Observable<Product[]> {
-    return this.getProducts().pipe(
+    const url = `${this.productsUrl}?v=${Date.now()}`;
+    return this.http.get<Product[]>(url).pipe(
       map(products => products.filter(product => product.categoryId === categoryId))
     );
   }
-
 }

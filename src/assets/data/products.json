@@ -2695,11 +2695,11 @@
     "name": "DUCHA LAVA OJOS INOXIDABLE MARCA STEELPRO",
     "description": "El modelo de Ducha Steelpro INOX (BD-560 A). Posee todos sus componentes de Acero Inoxidable 304. Está diseñada para ser instalada en lugares cercanos a las fuentes de peligro como ambientes agresivos e industriales. No se recomienda el uso en ambientes marinos. • Su composición la hace ideal para usos en lugares con riesgos químicos y líquidos, plantas de gases y de residuos líquidos. • Ducha se activa manualmente mediante válvula de bola. • El lavaojos posee además un filtro de regulación de caudal y su tapa de protección se abre mediante válvula de bola con placa de empuje. • Diámetro de la tubería 1 pulgada. • Salida y entrada de agua con conexión de 1¼” • La ducha se activa manualmente mediante válvula de bola, diseñada de acero inoxidable de alta resistencia a la corrosión. • Bajo cumplimiento de normativa . Normativa: EN 15154.2 ANSI Z358.1",
     "images": [
-      "image300.png"
+      "300_1.png"
     ],
     "categoryId": 1
   },
-    {
+  {
     "id": 301,
     "name": "GUANTE HEAVY DUTY TEJIDO",
     "description": "• Guante con soporte interior de algodón.\n• Recubrimiento completo de Nitrilo liso.\n• Puño tejido de algodón.\n• Excelente resistencia a la abrasión, rasgadura, aceites y grasas.\n• Ideal para trabajos medio o pesados.\n• Recomendado para minería, mecánica, construcción, industria en general.\n• Talla 9.\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
@@ -2774,6 +2774,26 @@
       "308_4.png"
     ]
     ,
+    "categoryId": 1
+  },
+  {
+    "id": 309,
+    "name": "Lámpara LED para conos y tambores",
+    "description": "• Luminosidad: 6 pcs Led de alto brillo.\n• Material: Lente PS (poliestireno) y base de PP (polipropileno).\n• Forma de trabajo: Luz intermitente, 70 a 75 veces por minuto.\n• Lámpara destellante para señalización de tránsito, en zonas de obras, desvíos de tránsito o desvío.\n\nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "309_1.png",
+      "309_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 310,
+    "name": "Guante Redder Mecánico M-50",
+    "description": "• Fabricado en material sintético.\n• Palma reforzada, con sistema de atenuación de vibraciones en su palma.\n• Puño elástico, con ajuste y velcro.\n• Nivel medio de precisión.\n• Talla única.\n\nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "310_1.png",
+      "310_2.png"
+    ],
     "categoryId": 1
   }
 ]
