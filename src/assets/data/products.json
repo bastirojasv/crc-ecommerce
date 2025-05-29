@@ -2795,5 +2795,105 @@
       "310_2.png"
     ],
     "categoryId": 1
+  },
+  {
+    "id": 311,
+    "name": "Guante Mecánico M-60 Pro",
+    "description": "• Fabricado en fibra resistente al corte (Nivel 4). (HPPE/Fibra de vidrio)\n• Palma recubierta en nitrilo gript con sistema de atenuación de vibraciones en la palma.\n• Dorso y nudillos con sistema de protección a impactos.\n• Refuerzo adicional a ajuste pistola (entre índice y pulgar).\n• Nivel medio de precisión.\n• Puño elástico y con ajuste con velcro.\n• Tallas 7, 8.\n<table><thead><tr><th>Tallas</th><th>Códigos</th></tr></thead><tbody><tr><td>7</td><td>1022</td></tr><tr><td>8</td><td>1023</td></tr><tr><td>10</td><td>1024</td></tr></tbody></table>\nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "311_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 312,
+    "name": "Guante Heavy Duty Puño Seguridad",
+    "description": "• Guante con soporte interior de algodón.\n• Recubrimiento completo de Nitrilo liso.\n• Puño seguridad.\n• Excelente resistencia a la abrasión, rasgadura, aceites y grasas.\n• Ideal para trabajos medio o pesados.\n• Recomendado para minería, mecánica, construcción, industria en general.\n\nUsos:\n• Recomendado para minería, mecánica, construcción, industria en general.",
+    "images": [
+      "312_1.png",
+      "312_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 313,
+    "name": "Guante Redder Palma Latex",
+    "description": "• Fabricado en Fibra Algodón.\n• Palma recubierta en Latex.\n• Puño Elástico.\n• Dorso Descubierto lo que brinda mayor frescura.\n• Ideal para aplicaciones en superficies secas o ligeramente húmedas.\n• Ergonómico y ajuste natural para mejor confort.\n• Ideal para trabajos medios o pesados.\n• Talla Única.\n\nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "313_1.png",
+      "313_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 314,
+    "name": "Guante Flocado Nitrilo Verde",
+    "description": "• Guante de nitrilo.\n• Recubrimiento completo de Nitrilo.\n• Flocado interior de algodón.\n• Excelente resistencia a la abrasión, rasgadura y contacto con aceites y grasas.\n• No se degrada, debilita y no produce reacciones alérgicas.\n• Tallas 8, 9, 10, 11.\n<table><thead><tr><th>Tallas</th><th>Verde</th></tr></thead> <tbody> <tr><td>8</td><td>13001015</td></tr> <tr><td>9</td><td>13001016</td></tr> <tr><td>10</td><td>13001017</td></tr> <tr><td>11</td><td>20000310</td></tr> </tbody> </table> \nUsos:\n• Recomendado para minería, mecánica, construcción, manipulación de alimentos, laboratorios e industria en general.",
+    "images": [
+      "314_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 315,
+    "name": "Guante Multiprotect Light",
+    "description": "• Fabricado en Fibra Nylon.\n• Palma recubierta en Poliuretano.\n• Puño Elástico.\n• Dorso Descubierto.\n• Ideal para aplicaciones en superficies secas o ligeramente húmedas.\n• Ergonómico y ajuste natural para mejor confort.\n• Gran nivel de destreza, sensibilidad y motricidad fina para el ideal manejo de piezas pequeñas.\n• Tallas 7, 8, 9.\n <table> <thead><tr><th>Tallas</th><th>Gris</th><th>Negro</th></tr></thead> <tbody> <tr><td>7</td><td>1007</td><td>1004</td></tr> <tr><td>8</td><td>1006</td><td>1003</td></tr> <tr><td>9</td><td>1005</td><td>1002</td></tr> </tbody> </table> \nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "315_1.png",
+      "315_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 316,
+    "name": "Guante Albañil",
+    "description": "• Material repelente a líquidos químicos e hidrocarburos.\n• Puño y material elasticados.\n• Palma con revestimiento diamantado que mejora el agarre.",
+    "images": [
+      "316_1.png",
+      "316_2.png",
+      "316_3.png",
+      "316_4.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 317,
+    "name": "Guante Hilo Pigmentado",
+    "description": "• Puño elasticado que mejora la adaptabilidad al usuario.\n• Revestimiento rugoso en palma y punta de los dedos para mejorar el agarre.\n<table>\thead><tr><th>Herbas</th><th>Código</th></tr></thead><tbody><tr><td>2</td><td>33001006</td></tr><tr><td>4</td><td>33001007</td></tr></tbody></table>",
+    "images": [
+      "317_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 318,
+    "name": "Guante Soldador Hilo Kevlar",
+    "description": "• Guante resistente para trabajos con maquinaria de soldadura.\n• Hecho con cuero descarne.\n• Resistente al desgarro.\n• Puño largo, guante de 15\".\n• Forro con interior textil.\n• Costuras realizadas con hilo kevlar.",
+    "images": [
+      "318_1.png",
+      "318_2.png",
+      "318_3.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 319,
+    "name": "Guante Soldador",
+    "description": "• Guante resistente para trabajos con maquinaria de soldadura.\n• Hecho con cuero descarne.\n• Resistente al desgarro.\n• Puño largo, guante de 13\".\n• Con forro interior de textil.\n• Costuras reforzadas de algodón.",
+    "images": [
+      "319_1.png",
+      "319_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 320,
+    "name": "Guante Multiprotect Flex",
+    "description": "• Fabricado en poliéster texturizado.\n• Palma recubierta en nitrilo liso.\n• Puño elástico.\n• Dorso descubierto, que brinda una mejor recirculación del aire al interior.\n• Excelente nivel de motricidad y precisión.\n• Excelente agarre.\n• Tallas 7, 8, 9.\n <table> <thead><tr><th>Tallas</th><th>Nitrilo Blue</th><th>Nitrilo Orange</th></tr></thead> <tbody> <tr><td>7</td><td>1008</td><td>1011</td></tr> <tr><td>8</td><td>1009</td><td>1012</td></tr> <tr><td>9</td><td>1010</td><td>1013</td></tr> </tbody> </table> \nUsos:\n• Recomendado para minería, mecánica, construcción, aeronáutica, electrónica e industria en general.",
+    "images": [
+      "320_1.png",
+      "320_2.png"
+    ],
+    "categoryId": 1
   }
 ]

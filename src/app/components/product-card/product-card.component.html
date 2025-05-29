@@ -1,9 +1,10 @@
-<div class="product-card-container">
+<div class="product-card-container" (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()">
   <a [routerLink]="['/products', product.id]">
     <img
       [src]="'assets/images/' + product.images[0]"
       [alt]="product.name"
-      class="product-img" />
+      class="product-img fade-image" />
   </a>
 
   <h5 class="product-title">

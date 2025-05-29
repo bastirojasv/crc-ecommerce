@@ -51,6 +51,11 @@ export class ProductDetailPageComponent implements OnInit {
     });
   }
 
+  get formattedDescription(): string {
+    if (!this.product?.description) return '';
+    return this.product.description.replace(/\n/g, '<br>');
+  }
+
   toggleCollapse(): void {
     this.isCollapsed = !this.isCollapsed;
   }
@@ -61,8 +66,11 @@ export class ProductDetailPageComponent implements OnInit {
       this.app.showToast(`${this.quantity} × ${this.product.name} añadido al carrito`);
       
       this.btnPulse = true;
-      setTimeout(() => this.btnPulse = false, 300); // elimina la clase tras animación
+      setTimeout(() => this.btnPulse = false, 300);
     }
   }
-  
+
+  onThumbnailClick(img: string) {
+    this.selectedImage = img;
+  }
 }

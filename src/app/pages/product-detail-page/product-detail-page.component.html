@@ -37,14 +37,14 @@
             [alt]="product.name"
             class="thumb-image"
             [class.active]="img === selectedImage"
-            (click)="selectedImage = img" />
+            (click)="onThumbnailClick(img)" />
         </div>
       </div>
       
     </div>
     <div class="col-md-6">
       <h1 class="product-title">{{ product.name }}</h1>
-      <p class="product-description" [innerHTML]="product.description"></p>
+      <p class="product-description" [innerHTML]="formattedDescription"></p>
 
       <!-- Especificación Técnica -->
       <div class="collapse-box mt-4" *ngIf="product.technicalDetails && product.technicalDetails.trim() !== ''">

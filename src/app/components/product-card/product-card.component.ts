@@ -17,11 +17,27 @@ export class ProductCardComponent {
   @Input() product!: Product;
   quantity: number = 1;
 
+  currentImage: string = '';
+
   constructor(
     private router: Router, 
     private cartService: CartService,
     private app: AppComponent
   ) {}
+
+  ngOnInit() {
+    this.currentImage = this.product.images[0];
+  }
+
+  onMouseEnter() {
+    if (this.product.images.length > 1) {
+      this.currentImage = this.product.images[1];
+    }
+  }
+
+  onMouseLeave() {
+    this.currentImage = this.product.images[0];
+  }
 
   addToCart(): void {
     this.cartService.addToCart(this.product, this.quantity);
