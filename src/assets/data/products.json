@@ -2895,5 +2895,88 @@
       "320_2.png"
     ],
     "categoryId": 1
+  },
+  {
+    "id": 321,
+    "name": "Lentes de Seguridad Alma",
+    "description": "• Marco y Lente de Policarbonato.\n• Curvatura envolvente. Ajuste nasal soft.\n• Sello de espuma.\n• Protección UV y Antimpacto.\n• Terminal brazos antideslizantes e intercambiables.\n• Anti empañante.\n\n<table>\n<thead><tr><th>Color</th><th>Código</th></tr></thead>\n<tbody>\n<tr><td>Gris</td><td>17001007</td></tr>\n<tr><td>Claro</td><td>17001006</td></tr>\n</tbody>\n</table>\n\nUsos:\n• Cumple norma ANSI Z 87.1-2015.\n• Protección limitada para los ojos.\n• Resistente al impacto, no irrompible.\n• No se recomienda en faenas de alta exposición a proyectiles.\n• Revisar antes de usar.",
+    "images": [
+      "321_1.png",
+      "321_2.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 322,
+    "name": "Lente Redder Light",
+    "description": "• Marco y Lente de Policarbonato.\n• Curvatura envolvente.\n• Protección lateral.\n• Ultra livianos.\n• Protección UV y antimpacto.\n\n<table>\n<thead><tr><th>Color</th><th>Código</th></tr></thead>\n<tbody>\n<tr><td>Claro</td><td>17001001</td></tr>\n<tr><td>Gris</td><td>17001002</td></tr>\n<tr><td>InOut</td><td>17001003</td></tr>\n</tbody>\n</table>\n\nUsos:\n• Cumple norma ANSI Z 87.1-2015.\n• Protección limitada para los ojos.\n• Resistente al impacto, no irrompible.\n• No usar en faenas con alta exposición a proyectiles.",
+    "images": [
+      "322_1.png",
+      "322_2.png",
+      "322_3.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 323,
+    "name": "Lentes de Seguridad Panzer Pro",
+    "description": "• Marco y Lente de Policarbonato.\n• Curvatura envolvente.\n• Ajuste nasal soft.\n• Sello de espuma.\n• Protección UV y antimpacto.\n• Incluye cordón de seguridad.\n• Anti empañante.\n\n<table>\n<thead><tr><th>Color</th><th>Código</th></tr></thead>\n<tbody>\n<tr><td>Gris</td><td>17001005</td></tr>\n<tr><td>Claro</td><td>17001004</td></tr>\n</tbody>\n</table>\n\nUsos:\n• Cumple norma ANSI Z 87.1-2015.\n• Protección limitada para los ojos.\n• Resistente al impacto, no irrompible.\n• No usar en faenas con alta exposición a proyectiles.",
+    "images": [
+      "323_1.png",
+      "323_2.png",
+      "323_3.png",
+      "323_4.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 324,
+    "name": "Barbuquejo Gancho Metálico",
+    "description": "• Es apto para ser usado en cascos.\n• Diseñados para soltarse ante un accidente que exponga al usuario al estrangulamiento.\n• Terminaciones sin costura, evita irritaciones por roce.\n• Ajuste Regulable.\n• Enganches plásticos y de metal para adosar a casco.\n\nUsos:\n• Agricultura\n• Industria Química\n• Construcción\n• Electricidad\n• Minería\n• Gas y Petróleo\n• Toda operación que suponga riesgo de caída de casco",
+    "images": [
+      "324_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 325,
+    "name": "Barbiquejo Gancho Plástico",
+    "description": "• Es apto para ser usado en cascos.\n• Diseñados para soltarse ante un accidente que exponga al usuario al estrangulamiento.\n• Terminaciones sin costura, evita irritaciones por roce.\n• Ajuste Regulable.\n• Enganches plásticos y de metal para adosar a casco.\n\nUsos:\n• Agricultura\n• Industria Química\n• Construcción\n• Electricidad\n• Minería\n• Gas y Petróleo\n• Toda operación que suponga riesgo de caída de casco",
+    "images": [
+      "325_1.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 326,
+    "name": "Bota Punta y Planta",
+    "description": "• Puntera de acero\n• Planta antideslizante\n• Bota ultra liviana\n• Resistente y flexible\n• Resistente a hidrocarburos\n• Plantilla de acero anticlavo\n• Planta antideslizante\n\n<table>\n<thead><tr><th>Tallas</th><th>Códigos</th></tr></thead>\n<tbody>\n<tr><td>38</td><td>900</td></tr>\n<tr><td>39</td><td>320</td></tr>\n<tr><td>40</td><td>110</td></tr>\n<tr><td>41</td><td>120</td></tr>\n<tr><td>42</td><td>130</td></tr>\n<tr><td>43</td><td>140</td></tr>\n<tr><td>44</td><td>150</td></tr>\n<tr><td>45</td><td>160</td></tr>\n</tbody>\n</table>",
+    "images": [
+      "326_1.png",
+      "326_2.png",
+      "326_3.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 327,
+    "name": "Botín Café Pro-K",
+    "description": "• Punta de acero\n• Planta antideslizante\n• Soporte de talonera\n• Suplente y talones acolchados\n• Botín ultra liviano\n• Plantilla antimicótica\n• Resistente a hidrocarburos\n• Aislante eléctrico\n• Cuero Print\n• Plantilla Kevlar\n• Planta Antideslizante\n• Puntera de acero\n\n<table>\n<thead><tr><th>Tallas</th><th>Café</th></tr></thead>\n<tbody>\n<tr><td>35</td><td>3035</td></tr>\n<tr><td>36</td><td>3036</td></tr>\n<tr><td>37</td><td>3037</td></tr>\n<tr><td>38</td><td>3038</td></tr>\n<tr><td>39</td><td>3039</td></tr>\n<tr><td>40</td><td>3040</td></tr>\n<tr><td>41</td><td>3041</td></tr>\n<tr><td>42</td><td>3042</td></tr>\n<tr><td>43</td><td>3043</td></tr>\n<tr><td>44</td><td>3044</td></tr>\n<tr><td>45</td><td>3045</td></tr>\n<tr><td>46</td><td>3046</td></tr>\n</tbody>\n</table>",
+    "images": [
+      "327_1.png",
+      "327_2.png",
+      "327_3.png"
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 328,
+    "name": "Botín Negro Pro-A",
+    "description": "• Botín Ultra Liviano\n• Plantilla antimicótica\n• Resistente a hidrocarburos\n• Aislante eléctrico\n• Numeración disponible\n• Cuero split\n• Resistente y flexible\n• Material respirable\n• Construcción inyectado\n• Plantilla antiperforante\n• Planta antideslizante\n• Punta de acero\n\n<table>\n<thead><tr><th>Tallas</th><th>Negro</th></tr></thead>\n<tbody>\n<tr><td>35</td><td>2035</td></tr>\n<tr><td>36</td><td>2036</td></tr>\n<tr><td>37</td><td>2037</td></tr>\n<tr><td>38</td><td>2038</td></tr>\n<tr><td>39</td><td>2039</td></tr>\n<tr><td>40</td><td>2040</td></tr>\n<tr><td>41</td><td>2041</td></tr>\n<tr><td>42</td><td>2042</td></tr>\n<tr><td>43</td><td>2043</td></tr>\n<tr><td>44</td><td>2044</td></tr>\n<tr><td>45</td><td>2045</td></tr>\n<tr><td>46</td><td>2046</td></tr>\n</tbody>\n</table>",
+    "images": [
+      "328_1.png",
+      "328_2.png"
+    ],
+    "categoryId": 1
   }
 ]
