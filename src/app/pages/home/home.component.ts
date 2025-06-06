@@ -1,28 +1,45 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeaturedProductsComponent } from '../../components/featured-products/featured-products.component';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
 import { Title } from '@angular/platform-browser';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, FeaturedProductsComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fadeAnimation', [
+      transition(':increment', [
+        style({ opacity: 0, transform: 'scale(1.03)' }),
+        animate('500ms cubic-bezier(.4,0,.2,1)', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
+      transition(':decrement', [
+        style({ opacity: 0, transform: 'scale(0.97)' }),
+        animate('500ms cubic-bezier(.4,0,.2,1)', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
+      transition('* => *', [
+        style({ opacity: 0 }),
+        animate('400ms', style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedProduct?: Product;
   images: string[] = [
     'img1.jpg',
-    // 'img2.jpg',
-    // 'img3.jpg',
-    // 'img4.jpg',
-    // 'img5.jpg',
+    'img2.jpg',
+    'img3.jpg',
+    'img4.jpg',
+    'img5.jpg',
   ];
+  currentIndex = 0;
+  carouselInterval: any;
 
   featuredProductsCarousel: Product[] = [];
   brands = [
@@ -69,7 +86,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit() {
-
     this.titleService.setTitle('Inicio | CRC Comercial SPA');
 
     // this.productService.getProducts().subscribe((products) => {
@@ -77,6 +93,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     //     .sort(() => 0.8 - Math.random())
     //     .slice(0, 8);
     // });
+    this.startAutoplay();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoplay();
   }
 
   openProduct(product: Product) {
@@ -87,19 +108,38 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.selectedProduct = undefined;
   }
 
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
+
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  goToImage(index: number) {
+    this.currentIndex = index;
+    this.restartAutoplay();
+  }
+
+  startAutoplay() {
+    this.carouselInterval = setInterval(() => {
+      this.nextImage();
+    }, 5000);
+  }
+
+  stopAutoplay() {
+    if (this.carouselInterval) {
+      clearInterval(this.carouselInterval);
+    }
+  }
+
+  restartAutoplay() {
+    this.stopAutoplay();
+    this.startAutoplay();
+  }
+
   ngAfterViewInit() {
-    var swiper = new Swiper('.carrousel-swiper', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      }
-    });
+    // Ya no es necesario Swiper aquí
   }
   
 }

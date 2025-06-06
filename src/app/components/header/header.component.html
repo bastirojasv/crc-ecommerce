@@ -27,6 +27,38 @@
         </li>
       </ul>
 
+    <!-- Search bar -->
+    <div class="search-wrapper mx-auto">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Busca algún producto..."
+          [(ngModel)]="searchText"
+          (input)="filterProducts()"
+          (focus)="isFocused = true"
+          (blur)="isFocused = false"
+        />
+        
+        <!-- Suggestion list -->
+        <ul *ngIf="filteredProducts.length > 0" class="suggestions-list">
+          <li *ngFor="let product of filteredProducts" class="suggestion-item">
+            <a [routerLink]="['/product', product.id]">
+              <img
+                *ngIf="product.images?.length"
+                [src]="'assets/images/' + product.images[0]"
+                alt="{{ product.name }}"
+                class="suggestion-image"
+              />
+              <span class="suggestion-name">{{ product.name }}</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
 
     <a routerLink="/cart" class="position-relative me-3">
       <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>

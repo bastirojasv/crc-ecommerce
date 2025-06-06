@@ -1,13 +1,19 @@
-<div class="swiper carrousel-swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let image of images">
-      <img
-        [src]="'assets/images/carrousel/' + image"
-        class="img-fluid rounded"
-      />
-    </div>
+<div class="native-carousel">
+  <div class="carousel-image-wrapper">
+    <img
+      [@fadeAnimation]="currentIndex"
+      [src]="'assets/images/carrousel/' + images[currentIndex]"
+      class="img-fluid rounded"
+      [alt]="'Imagen ' + (currentIndex + 1)"
+    />
   </div>
-  <div class="swiper-pagination"></div>
+  <div class="carousel-pagination">
+    <span
+      *ngFor="let img of images; let i = index"
+      [class.active]="i === currentIndex"
+      (click)="goToImage(i)">
+    </span>
+  </div>
 </div>
 
 <div class="container featured-products">
