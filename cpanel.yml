@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - echo "📦 Instalando dependencias..."
+    - /opt/cpanel/ea-nodejs18/bin/npm install
+    - echo "⚙️ Compilando Angular..."
+    - /opt/cpanel/ea-nodejs18/bin/npm run build
+    - echo "📁 Copiando archivos compilados al sitio web..."
+    - rsync -av --delete dist/crc-ecommerce/browser/ /home/usuario/public_html/
