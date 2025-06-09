@@ -80,6 +80,14 @@ export class ProductsComponent {
           this.currentCategoryName = 'Todos los Productos';
         }
 
+        this.route.queryParams.subscribe(params => {
+        const search = params['search'];
+        if (search) {
+          this.searchText = search;
+          this.applyFilters(); // ✅ Ahora sí se filtra porque los productos ya están cargados
+          }
+        });
+
         this.isMobile = window.innerWidth < 768;
 
         this.updatePaginatedProducts();

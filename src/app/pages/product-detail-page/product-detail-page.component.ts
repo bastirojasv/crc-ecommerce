@@ -34,20 +34,22 @@ export class ProductDetailPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-    this.productService.getProducts().subscribe(products => {
-      const found = products.find(p => p.id === id);
-      if (found) {
-        this.product = found;
-        this.selectedImage = found.images[0];
+    this.route.paramMap.subscribe(paramMap => {
+      const id = +paramMap.get('id')!;
+      this.productService.getProducts().subscribe(products => {
+        const found = products.find(p => p.id === id);
+        if (found) {
+          this.product = found;
+          this.selectedImage = found.images[0];
 
-        this.titleService.setTitle(`${found.name} | CRC Comercial SPA`);
-  
-        this.categoryService.getCategories().subscribe(categories => {
-          const match = categories.find(c => c.id === found.categoryId);
-          if (match) this.categoryName = match.name;
-        });
-      }
+          this.titleService.setTitle(`${found.name} | CRC Comercial SPA`);
+
+          this.categoryService.getCategories().subscribe(categories => {
+            const match = categories.find(c => c.id === found.categoryId);
+            if (match) this.categoryName = match.name;
+          });
+        }
+      });
     });
   }
 

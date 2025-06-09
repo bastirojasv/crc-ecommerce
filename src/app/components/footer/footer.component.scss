@@ -60,3 +60,88 @@
   }
 }
 
+.btn-success {
+  background-color: #25d366;
+  border: none;
+
+  &:hover {
+    background-color: #1ebea5;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-custom {
+    text-align: center;
+
+    h5 {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      padding-left: 0;
+      margin-bottom: 1.5rem;
+
+      li {
+        margin-bottom: 0.8rem;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .footer-link {
+      font-size: 1.08rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      input {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .termofusion-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+
+    img {
+      margin-bottom: 0.7rem;
+      max-height: 50px;
+    }
+
+    h6 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      margin-top: 0.7rem;
+      width: 100%;
+    }
+  }
+}
+
+

@@ -1,34 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">
-      <img src="assets/images/logo.png" alt="CRC Comercial" style="height: 60px;" />
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <div class="container-fluid d-flex align-items-center flex-wrap">
+    <!-- Botón hamburguesa primero -->
+    <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav d-flex align-items-center me-3">
-        <li class="nav-item">
-          <a class="nav-link text-uppercase fw-bold" routerLink="/products">
-            Todos los productos
-          </a>
-        </li>
+    <!-- Logo -->
+    <a class="navbar-brand order-2" routerLink="/">
+      <img src="assets/images/logo.png" alt="CRC Comercial" style="height: 60px;" />
+    </a>
 
-        <li class="nav-item" *ngFor="let category of categories">
-          <a
-            class="nav-link text-uppercase"
-            [routerLink]="['/products']"
-            [queryParams]="{ category: category.id }"
-          >
-            {{ category.name }}
-          </a>
-        </li>
-      </ul>
+    <!-- Contenedor del carrito -->
+    <div class="cart-wrapper order-3 order-lg-last ms-lg-auto me-3">
+      <a routerLink="/cart" class="position-relative cart-always-visible">
+        <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>
+        <span
+          *ngIf="totalItems > 0"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+          {{ totalItems }}
+        </span>
+      </a>
+    </div>
 
-    <!-- Search bar -->
-    <div class="search-wrapper mx-auto">
+    <!-- Barra de búsqueda SIEMPRE visible -->
+    <div class="search-wrapper w-100 my-2 my-lg-0 order-4">
       <div class="search-box">
         <i class="fas fa-search search-icon"></i>
         <input
@@ -40,11 +35,17 @@
           (focus)="isFocused = true"
           (blur)="isFocused = false"
         />
-        
         <!-- Suggestion list -->
-        <ul *ngIf="filteredProducts.length > 0" class="suggestions-list">
+        <ul *ngIf="searchText && filteredProducts.length >= 0" class="suggestions-list">
+          <!-- Sugerencia basada en texto ingresado -->
+          <li class="suggestion-item search-all" (click)="goToSearchResults()">
+            <i class="fas fa-search me-2 text-muted"></i>
+            Buscar “{{ searchText }}” en todos los productos
+          </li>
+
+          <!-- Sugerencias de productos -->
           <li *ngFor="let product of filteredProducts" class="suggestion-item">
-            <a [routerLink]="['/product', product.id]">
+            <a (click)="goToProduct(product.id)">
               <img
                 *ngIf="product.images?.length"
                 [src]="'assets/images/' + product.images[0]"
@@ -55,20 +56,27 @@
             </a>
           </li>
         </ul>
-
       </div>
     </div>
 
-
-    <a routerLink="/cart" class="position-relative me-3">
-      <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>
-      <span
-        *ngIf="totalItems > 0"
-        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-        {{ totalItems }}
-      </span>
-    </a>
-      
+    <!-- Menú colapsable -->
+    <div class="collapse navbar-collapse justify-content-end order-5" id="navbarNav">
+      <ul class="navbar-nav d-flex align-items-center me-3">
+        <li class="nav-item">
+          <a class="nav-link text-uppercase fw-bold" routerLink="/products">
+            Todos los productos
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let category of categories">
+          <a
+            class="nav-link text-uppercase"
+            [routerLink]="['/products']"
+            [queryParams]="{ category: category.id }"
+          >
+            {{ category.name }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

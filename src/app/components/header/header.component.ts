@@ -71,8 +71,23 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  goToSearchResults(): void {
+    const trimmed = this.searchText?.trim();
+    if (trimmed) {
+      this.router.navigate(['/products'], { queryParams: { search: trimmed } });
+      this.searchText = '';
+      this.filteredProducts = [];
+    }
+  }
+
   goToCategory(categoryId: number): void {
     this.router.navigate(['/products'], { queryParams: { category: categoryId } });
+  }
+
+  goToProduct(productId: number): void {
+    this.router.navigate(['/products', productId]);
+    this.filteredProducts = [];
+    this.searchText = '';
   }
 
   triggerBounce(): void {

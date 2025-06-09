@@ -27,20 +27,33 @@
 </div>
 
 <div class="container my-5 marcas-box">
-  <h2 class="text-center mb-4 marcas-title">
+  <h2 class="text-center mb-1 marcas-title">
     <span class="marcas-icon">★</span>
     MARCAS QUE CONFIAN EN NOSOTROS
     <span class="marcas-icon">★</span>
   </h2>
-  <div class="row justify-content-center align-items-center brands-grid text-center">
-    <div class="col-6 col-md-3 col-lg-2 mb-4" *ngFor="let brand of brands">
-      <a target="_blank" rel="noopener noreferrer">
-        <div class="brand-wrapper brand-bg">
-          <img [src]="brand.img" [alt]="brand.name" class="brand-logo" />
-        </div>
-      </a>
-      <p class="brand-name">{{ brand.name }}</p>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="flex-grow-1"></div>
+  </div>
+  <div class="row justify-content-center align-items-center brands-carousel text-center"
+       [@fadeAnimation]="currentLogoPage">
+    <div class="col-6 col-md-4 col-lg-2 mb-4" *ngFor="let logo of visibleLogos">
+      <div class="brand-wrapper brand-bg">
+        <img 
+          [src]="'assets/images/product_logos/' + logo" 
+          [alt]="logo" 
+          class="mx-3 my-2 brand-logo-img"
+        />
+      </div>
     </div>
+  </div>
+  <div class="d-flex justify-content-center mt-2">
+    <span 
+      *ngFor="let page of [].constructor(totalLogoPages); let i = index"
+      class="logo-page-dot"
+      [class.active]="i === currentLogoPage"
+      (click)="goToLogoPage(i)">
+    </span>
   </div>
 </div>
 

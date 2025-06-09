@@ -60,11 +60,11 @@
   background: transparent;
   padding: 16px;
   border-radius: 12px;
-  transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 90px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .brand-bg:hover {
@@ -128,16 +128,15 @@
   margin: 0 8px;
 }
 
+// Carrusel principal de imágenes
 .native-carousel {
   position: relative;
   width: 100%;
-  max-width: 2000px; // Ajusta este valor según tu preferencia
+  max-width: 2000px;
   margin: 0 auto;
   min-height: 340px;
   background: #fff;
   border-radius: 18px;
-  // box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,14 +144,14 @@
 
   .carousel-image-wrapper {
     width: 100%;
-    aspect-ratio: 16 / 5; // Proporción panorámica, puedes ajustar a 16/6 o 16/7 si quieres más baja
+    aspect-ratio: 16 / 5;
     min-height: 340px;
     max-height: 520px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -160,29 +159,10 @@
       border-radius: 18px;
       transition: opacity 0.5s, transform 0.5s;
       background: #fff;
-      box-shadow: none;
       display: block;
       max-width: 100%;
       max-height: 520px;
     }
-  }
-
-  .carousel-btn {
-    background: rgba(0,0,0,0.3);
-    border: none;
-    color: #fff;
-    font-size: 2.5rem;
-    padding: 0 18px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.2s;
-    z-index: 2;
-    &:hover {
-      background: #ffc107;
-      color: #111;
-    }
-    &.prev { margin-right: 8px; }
-    &.next { margin-left: 8px; }
   }
 
   .carousel-pagination {
@@ -223,4 +203,38 @@
       }
     }
   }
+  .brand-logo-img {
+    height: 70px;
+    max-width: 110px;
+    padding: 4px;
+  }
+}
+
+.brand-logo-img {
+  height: 100px;
+  max-width: 180px;
+  object-fit: contain;
+  transition: transform 0.3s;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.logo-page-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #fff3;
+  border: 2px solid #ffc107;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logo-page-dot.active {
+  background: #ffc107;
+}
+
+.brands-carousel {
+  min-height: 160px;
+  transition: opacity 0.5s;
 }
