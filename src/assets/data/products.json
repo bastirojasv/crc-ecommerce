@@ -58,7 +58,9 @@
     "name": "GUANTE CABRITILLA TPR REF. PISTOLA Y VELCRO RESISTOR T/10",
     "description": "COMPOSICIÓN: 100% Cuero cabritilla. Espesor: 0.9 - 1 mm. Dedo pulgar sin costura en la union de la palma de la mano, corte tipo ala tradicional. Dorso con protección contra impactos TPR. Estos son elaborados en goma termoplástica flexible que dispersa el impacto y la abrasión. Las aplicaciones TPR poseen ranuras que facilitan la movilidad de los dedos. Ajuste de velcro en muñeca para una mayor comodidad.",
     "images": [
-      "image007.png"
+      "image007.png",
+	  "image007_2.png",
+	  "image007_3.png"
     ],
     "categoryId": 1
   },
@@ -103,13 +105,14 @@
     "name": "GUANTE NINJA SKIN 9",
     "description": "Guante de Nylon con Recubrimiento de Nitrilo Espumoso color Amarillo, que permite tener destreza y flexibilidad para trabajos minuciosos.",
     "images": [
-      "image012.png"
+      "image012.png",
+	  "image012_2.png"
     ],
     "categoryId": 1
   },
   {
     "id": 13,
-    "name": "GUANTE SOLDADOR NARANJO KEVLAR PREMIUN",
+    "name": "GUANTE SOLDADOR NARANJO KEVLAR PREMIUM",
     "description": "Cuenta con costuras de kevlar resistente al fuego y chispas incandescentes. – Totalmente forrado y dedos cosidos en las puntas para evitar que se recojan. – Dorso en una sola pieza, sin costuras. – Guante certificado.",
     "images": [
       "image013.png"
@@ -122,15 +125,6 @@
     "description": "Guante de descarne curtido al cromo, con refuerzo exterior en palma completa, color verde. Puño rígido de 7 cms. color amarillo. Recomendado para trabajo liviano con maquinaria, manejo de herramietas pesadas y de construcción. • Guante descarne curtido al cromo. • Refuerzo en palma completa. • Puño rígido de seguridad. • Ajueste de elastico en muñeca. • Costuras en hilo de poliéster. • Resistente a la abrasión, corte y desgarro. • Usos: maquinaria, herramientas pesadas, contrucción.",
     "images": [
       "image014.png"
-    ],
-    "categoryId": 1
-  },
-  {
-    "id": 15,
-    "name": "GUANTE SOLDADOR AZUL HILO KEVLAR R/PALMA",
-    "description": "– Cuenta con costuras de kevlar resistente al fuego y chispas incandescentes. – Totalmente forrado y dedos cosidos en las puntas para evitar que se recojan. – Dorso en una sola pieza, sin costuras. – Guante certificado.",
-    "images": [
-      "image015.png"
     ],
     "categoryId": 1
   },
@@ -211,7 +205,10 @@
     "name": "GUANTE HEXARMOR 2090X IMPACTO NITRILO L",
     "description": "Riesgo de corte, elementos sobresalientes, espacios reducidos",
     "images": [
-      "image024.png"
+      "image024.png",
+	  "image024_2.png",
+	  "image024_3.png",
+	  "image024_4.png"
     ],
     "categoryId": 1
   },
@@ -262,10 +259,11 @@
   },
   {
     "id": 30,
-    "name": "GUANTE EXAMINACION NITRILO PREMIUM 3 5GR",
+    "name": "GUANTE EXAMINACION NITRILO PREMIUM 3,5GR",
     "description": "Son una excelente barrera de protección biológico y química. Dan una mayor protección contra la abrasión y punción que el látex natura. Las características físicas del producto lo categorizan como un guante sumamente versátil; su uso se extiendo al área industrial, alimenticia, hotelera, casinos, restaurantes, ferretería, mecánica y estética",
     "images": [
-      "image030.png"
+      "image030.png",
+	  "image030_2.png"
     ],
     "categoryId": 1
   },
@@ -325,7 +323,7 @@
   },
   {
     "id": 37,
-    "name": "GUANTE NITRILO PUÑO TEJIDO AZUL       THICK - STEEL PRO",
+    "name": "GUANTE NITRILO PUÑO TEJIDO AZUL THICK - STEEL PRO",
     "description": "Nitrilo (Material del recubrimiento), Algodón tejido (Material del forro), Diseñados ergonómicamente para un confort superior, Buena resistencia al corte, a perforaciones y a la abrasión, Magnífico agarre en seco, Un guante robusto para actividades pesadas: tres veces más duradero que los guantes de piel más resistentes, Fórmula de nitrilo exclusiva de Ansell, Excepcional resistencia a objetos cortantes y abrasivos, Más resistente y más flexible que el PVC. Muy resistente a la penetración de grasa o aceite. No se deteriora como el cuero o el algodón, Fabricado sin siliconas. Garantía de limpieza para metalurgia y automoción,",
     "images": [
       "image037.png"
@@ -334,7 +332,7 @@
   },
   {
     "id": 38,
-    "name": "GUANTE PVC ROJO 18\" steelpro",
+    "name": "GUANTE PVC ROJO 18 STEELPRO",
     "description": "Guante tipo estanco con soporte de algodón interlock y recubierto en un suave PVC, cuenta con acabado liso, diseño contorneado de dedo y mano, permitiendo con ello una buena adaptación a cualquier tipo de mano. su forro interior garantiza el control de la sudoración y las manos secas",
     "images": [
       "image038.png"
@@ -343,7 +341,7 @@
   },
   {
     "id": 39,
-    "name": "GUANTE PVC ROJO 14\"                                      THICK - GREENWAY   steelpro",
+    "name": "GUANTE PVC ROJO 14 THICK - GREENWAY STEELPRO",
     "description": "Guante tipo estanco con soporte de algodón interlock y recubierto en un suave PVC, cuenta con acabado liso, diseño contorneado de dedo y mano, permitiendo con ello una buena adaptación a cualquier tipo de mano. su forro interior garantiza el control de la sudoración y las manos secas.",
     "images": [
       "image039.png"
@@ -364,7 +362,8 @@
     "name": "GUANTE ACID BLUE LONG CUFF AZUL T/M",
     "description": "Guantes Pvc Largo Azul Fullgen Guante de PVC Blue Long es una nuevageneración de protección de manos queincorporan avances de ingeniería combinandoergonometría y protección. La manga mide 67 cm de largo, siendo elmodelo en el más largo del mercado. Cuentacon un tratamiento antibacterial y antiolor. Posee terminación antideslizante que entregaun excelente agarre tanto en condiciones secas como húmedas. Utilizado en la industria de manipulación de productos químicos, industriapetroquímica, transporte y manipulaciónde químicos, manejo de ácidos y productos cáusticos.",
     "images": [
-      "image041.png"
+      "image041.png",
+	  "image042.png"
     ],
     "categoryId": 1
   },
@@ -415,10 +414,11 @@
   },
   {
     "id": 47,
-    "name": "LENTE BOLLE AKA FOTOCROMATI CO",
+    "name": "LENTE BOLLE AKA FOTOCROMATICO",
     "description": "Lente de seguridad en policarbonato Gran resistencia a impactos Protección lateral de policarbonato Filtro uv 99,9 % de protección Cordón de sujeción Cubierta lateral para brindar protección frente al viento, radiaciones solares nocivas y reverberaciones Uso en ambientes con polvo, astillas, salpicaduras de líquidos corrosivos Cristales fotocromático con tiempo de activación (claro a oscuro) de 8 segundos y de 60 segundos recuperación (oscuro a claro).",
     "images": [
-      "image047.png"
+      "image047.png",
+	  "image047_2.png"
     ],
     "categoryId": 1
   },
