@@ -25,11 +25,44 @@
   <div class="row">
     <div class="col-md-6">
       <div class="image-gallery">
-        <img
-          [src]="'assets/images/' + selectedImage"
-          class="img-fluid rounded main-image mb-3"
-          [alt]="product.name" />
-      
+        <div
+          class="main-image-zoom"
+          [ngStyle]="mainImageZoomStyle"
+          (mousemove)="onImageMouseMove($event)"
+          (mouseleave)="onImageMouseLeave()"
+        >
+          <button
+            *ngIf="(product?.images?.length ?? 0) > 1"
+            class="carousel-arrow left"
+            (click)="prevImage($event)"
+            (mouseenter)="$event.stopPropagation()"
+            (mouseleave)="$event.stopPropagation()"
+            aria-label="Imagen anterior"
+            type="button"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            *ngIf="(product?.images?.length ?? 0) > 1"
+            class="carousel-arrow right"
+            (click)="nextImage($event)"
+            (mouseenter)="$event.stopPropagation()"
+            (mouseleave)="$event.stopPropagation()"
+            aria-label="Imagen siguiente"
+            type="button"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <img
+            [src]="'assets/images/' + selectedImage"
+            class="img-fluid rounded main-image mb-3 fade-image"
+            [class.fade-in]="fadeIn"
+            [alt]="product.name"
+            draggable="false"
+            style="pointer-events: none; opacity: 0;"
+          />
+        </div>
+        
         <div class="thumbs d-flex flex-wrap gap-2">
           <img
             *ngFor="let img of product.images"

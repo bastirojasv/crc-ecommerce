@@ -490,7 +490,9 @@
     "name": "LENTE ALTIMETER CLARO MSA N/P 2803521",
     "description": "Anteojos/Antiparras con un diseño mucho más curvado para entregar el espacio suficiente para el uso de respiradores, que a su vez, permite un uso adecuado con protectores auditivos, con ello se logra 100% de compatibilidad con elementos de protección personal complementarios. Incorpora 18 ranuras indirectas de gran tamaño que garantizan un rendimiento libre de empañamiento. Buen rendimiento antirrayaduras. Disponible en tonalidad gris y clara. Anteojos de seguridad de policarbonato cuyas patillas son intercambiables por banda elástica. Montura suave para una cobertura ocular completa y una óptima absorción de impactos. Inclinación del ocular/varilla (trinquete con ángulo ajustable). Banda de cabeza flexible de longitud ajustable con abertura central. Patas suaves con longitud ajustable. Protección de 99,9% de filtro frente a radiación UV.",
     "images": [
-      "image055.png"
+      "image055.png",
+	  "image055_2.png",
+	  "image055_3.png"
     ],
     "categoryId": 1
   },
@@ -508,7 +510,11 @@
     "name": "ANTIPARRA FAHRENHEIT CLARA 3M 40605 N/P DE272967253",
     "description": "Poseen un visor de policarbonato de alta resistencia con ventilación indirecta y sello de PVC flexible. Recubrimiento súper resistente, el cual proporciona protección contra empañamiento y rayaduras. Se pueden utilizar sobre lentes ópticos en la mayoría de los casos. Cumplen los requerimientos de Alto Impacto de la norma ANSI Z87.1 de EE.UU",
     "images": [
-      "image057.png"
+      "image057.png",
+	  "image057_2.png",
+	  "image057_3.png",
+	  "image057_4.png",
+	  "image057_5.png"
     ],
     "categoryId": 1
   },
@@ -535,7 +541,8 @@
     "name": "LENTE 3M VIRTUA CCS SELLADO CLARO AF 3M  11872-20",
     "description": "Lentes de policarbonato Transparente con tratamiento anti-empañante • Los tapones y cordón no vienen incluidos y se venden por separado. • Cumplen con la norma ANSI Z87.1-2010 y CSA Z94.3-07 • Absorbe las radiaciones del espectro Ultravioleta en un 99.9%. Los lentes de seguridad Virtua CCS Sellados de 3M, cuentan con un cómodo sello que ayuda a limitar la exposición de los ojos al polvo, mientras que proporcionan un acolchado adicional.",
     "images": [
-      "image060.png"
+      "image060.png",
+	  "image060_2.png"
     ],
     "categoryId": 1
   },
@@ -569,7 +576,7 @@
   {
     "id": 64,
     "name": "ANTEOJO DREIER PRO FOAM CLARO",
-    "description": "nan",
+    "description": "Anteojos de seguridad diseñados para proteger los ojos del usuario frente a riesgos laborales como salpicaduras de líquidos, partículas en suspensión, polvo, chispas y otros elementos peligrosos presentes en el entorno de trabajo.",
     "images": [
       "image064.png"
     ],
@@ -578,7 +585,7 @@
   {
     "id": 65,
     "name": "ANTEOJO DREIER PRO FOAM OSCURO",
-    "description": "nan",
+    "description": "Anteojos de seguridad diseñados para proteger los ojos del usuario frente a riesgos laborales como salpicaduras de líquidos, partículas en suspensión, polvo, chispas y otros elementos peligrosos presentes en el entorno de trabajo.",
     "images": [
       "image065.png"
     ],
@@ -587,7 +594,7 @@
   {
     "id": 66,
     "name": "ANTEOJO DREIER PRO FOAM IN-OUT",
-    "description": "nan",
+    "description": "Anteojos de seguridad diseñados para proteger los ojos del usuario frente a riesgos laborales como salpicaduras de líquidos, partículas en suspensión, polvo, chispas y otros elementos peligrosos presentes en el entorno de trabajo.",
     "images": [
       "image066.png"
     ],
@@ -616,7 +623,8 @@
     "name": "ANTIPARRA Y ANTEOJO DUCTILE WINGS IN-OUT CON INSERT OPTICO MSA N/P 2565AF_x0002_IO+RX 2803154",
     "description": "Anteojo de seguridad versatil y con multiples opciones de uso, se le intalar una banda elasticaa las patillas para evitar la perdida de la proteccion visual durante la jornada. Tambien disponible con inserto para lentes de prescripcion",
     "images": [
-      "image069.png"
+      "image069.png",
+	  "image069_2.png"
     ],
     "categoryId": 1
   },

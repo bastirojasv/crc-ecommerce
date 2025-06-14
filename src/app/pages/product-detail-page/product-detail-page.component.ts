@@ -23,6 +23,8 @@ export class ProductDetailPageComponent implements OnInit {
   selectedImage: string = '';
   quantity: number = 1;
   btnPulse = false;
+  mainImageZoomStyle: any = {};
+  fadeIn = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,9 +50,21 @@ export class ProductDetailPageComponent implements OnInit {
             const match = categories.find(c => c.id === found.categoryId);
             if (match) this.categoryName = match.name;
           });
+
+          // <-- Asegúrate de setear el backgroundImage aquí
+          this.mainImageZoomStyle = {
+            backgroundImage: `url('assets/images/${found.images[0]}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+          };
         }
       });
     });
+    this.mainImageZoomStyle = {
+      backgroundImage: '',
+      backgroundPosition: 'center',
+      backgroundSize: '100% 100%',
+    };
   }
 
   get formattedDescription(): string {
@@ -73,6 +87,66 @@ export class ProductDetailPageComponent implements OnInit {
   }
 
   onThumbnailClick(img: string) {
-    this.selectedImage = img;
+    this.fadeIn = false;
+    setTimeout(() => {
+      this.selectedImage = img;
+      this.mainImageZoomStyle = {
+        backgroundImage: `url('assets/images/${img}')`,
+        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+      };
+      this.fadeIn = true;
+    }, 10);
+  }
+
+  onImageMouseMove(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    // Si el mouse está sobre una flecha, no hagas zoom
+    if (target.classList.contains('carousel-arrow') || target.closest('.carousel-arrow')) {
+
+      this.mainImageZoomStyle = {
+        backgroundImage: `url('assets/images/${this.selectedImage}')`,
+        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+      };
+
+      return;
+    }
+    const rect = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    this.mainImageZoomStyle = {
+      backgroundImage: `url('assets/images/${this.selectedImage}')`,
+      backgroundPosition: `${x}% ${y}%`,
+      backgroundSize: '180% 180%',
+    };
+  }
+
+  onImageMouseLeave() {
+    this.mainImageZoomStyle = {
+      backgroundImage: `url('assets/images/${this.selectedImage}')`,
+      backgroundPosition: 'center',
+      backgroundSize: 'contain',
+    };
+  }
+
+  prevImage(event: Event) {
+    event.stopPropagation();
+    const btn = event.target as HTMLElement;
+    if (btn instanceof HTMLElement) btn.blur(); // Quita el foco
+    if (!this.product) return;
+    const idx = this.product.images.indexOf(this.selectedImage);
+    const prevIdx = (idx - 1 + this.product.images.length) % this.product.images.length;
+    this.onThumbnailClick(this.product.images[prevIdx]);
+  }
+
+  nextImage(event: Event) {
+    event.stopPropagation();
+    const btn = event.target as HTMLElement;
+    if (btn instanceof HTMLElement) btn.blur(); // Quita el foco
+    if (!this.product) return;
+    const idx = this.product.images.indexOf(this.selectedImage);
+    const nextIdx = (idx + 1) % this.product.images.length;
+    this.onThumbnailClick(this.product.images[nextIdx]);
   }
 }
