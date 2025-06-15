@@ -1,0 +1,26 @@
+// Archivo generado automáticamente
+export const PRODUCT_LOGOS: string[] = [
+  '3m_logo.png',
+  'defender_logo.png',
+  'delta_plus.png',
+  'dike_logo.png',
+  'edelbrock_logo.png',
+  'hw_logo.png',
+  'kumen_logo.png',
+  'kyorene_logo.png',
+  'msa_logo.png',
+  'nazca_logo.png',
+  'norseg_logo.png',
+  'panama_jack_logo.png',
+  'quebec_logo.png',
+  'raptor_safety.png',
+  'reebook_work_logo.png',
+  'resistor.png',
+  'safety_jogger_logo.png',
+  'segma_logo.png',
+  'siberia.png',
+  'sketchers_work_logo.png',
+  'steelpro_logo.png',
+  'towa.png',
+  't_world.png'
+];

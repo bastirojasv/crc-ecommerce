@@ -1,6 +1,6 @@
 <div class="product-card-container" (mouseenter)="onMouseEnter()"
      (mouseleave)="onMouseLeave()">
-  <a [routerLink]="['/products', product.id]">
+  <a [routerLink]="['/products', product.id]" [queryParams]="queryParams" [queryParamsHandling]="'merge'">
     <img
       [src]="'assets/images/' + product.images[0]"
       [alt]="product.name"
@@ -8,8 +8,8 @@
   </a>
 
   <h5 class="product-title">
-    <a [routerLink]="['/products', product.id]" style="text-decoration: none; color: inherit;">
-      {{ product.name }}
+    <a [routerLink]="['/products', product.id]" [queryParams]="queryParams" [queryParamsHandling]="'merge'" style="text-decoration: none; color: inherit;">
+      {{ product.name | slice:0:50 }}<span *ngIf="product.name.length > 50">...</span>
     </a>
   </h5>
 

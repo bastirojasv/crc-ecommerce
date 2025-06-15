@@ -15,6 +15,8 @@ import { AppComponent } from '../../app.component';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Input() currentPage!: number;
+  @Input() queryParams: any = {};
   quantity: number = 1;
 
   currentImage: string = '';
