@@ -1,18 +1,4 @@
+---
 deployment:
   tasks:
-    - echo "🔄 Iniciando despliegue..." > deploy.log
-
-    - export DEPLOYPATH=dist/crc-ecommerce/browser
-    - echo "🧭 Ruta de despliegue: $DEPLOYPATH" >> deploy.log
-
-    - if [ -d "$DEPLOYPATH" ]; then \
-        echo "✅ Directorio $DEPLOYPATH encontrado." >> deploy.log; \
-      else \
-        echo "❌ ERROR: No existe el directorio $DEPLOYPATH" >> deploy.log; \
-        exit 1; \
-      fi
-
-    - echo "📦 Copiando archivos..." >> deploy.log
-    - /bin/cp -Rvf $DEPLOYPATH/* ./ >> deploy.log 2>&1
-
-    - echo "✅ Despliegue finalizado con éxito." >> deploy.log
+    - echo "¡Deploy ejecutado correctamente!" > DEPLOY_OK.txt
