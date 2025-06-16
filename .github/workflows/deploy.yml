@@ -27,7 +27,7 @@ jobs:
       - name: Ensure .htaccess is present
         run: |
           if [ ! -f .htaccess ]; then
-            echo "⚠️ ERROR: Falta el archivo .htaccess" && exit 1
+            echo "⚠️ ERROR: Falta el archivo .htaccess " && exit 1
           fi
 
       - name: Push to cPanel-connected repo
