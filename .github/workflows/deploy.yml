@@ -34,6 +34,7 @@ jobs:
         run: |
           git config --global user.email "deploy@github.com"
           git config --global user.name "GitHub CI"
+          git remote remove cpanel || true
           git remote add cpanel https://x-access-token:${{ secrets.CPANEL_TOKEN }}@github.com/bastirojasv/crc-ecommerce.git
           git add dist/ .htaccess .cpanel.yml
           git commit -m "Auto deploy desde GitHub Actions 🚀" || echo "Nada que commitear"
