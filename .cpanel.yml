@@ -2,7 +2,19 @@
 deployment:
   tasks:
     - export DEPLOYPATH=dist/crc-ecommerce/browser
-    - echo "Inicio del deploy" > deploy.log
+    - echo "🔄 Iniciando deploy" > deploy.log
     - /bin/ls -la $DEPLOYPATH >> deploy.log 2>&1
+
+    # Limpiar contenido anterior de public_html
+    - echo "🧹 Limpiando /home/crcingen/public_html" >> deploy.log
+    - /bin/rm -rf /home/crcingen/public_html/* >> deploy.log 2>&1
+
+    # Copiar nueva build
+    - echo "📦 Copiando archivos..." >> deploy.log
     - /bin/cp -Rvf $DEPLOYPATH/* /home/crcingen/public_html/ >> deploy.log 2>&1
-    - echo "Deploy finalizado" >> deploy.log
+
+    # Copiar archivo .htaccess desde el repositorio
+    - echo "🔁 Restaurando .htaccess" >> deploy.log
+    - /bin/cp -v .htaccess /home/crcingen/public_html/.htaccess >> deploy.log 2>&1
+
+    - echo "✅ Deploy finalizado" >> deploy.log
