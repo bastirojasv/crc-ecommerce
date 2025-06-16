@@ -37,4 +37,5 @@ jobs:
           git remote add cpanel https://x-access-token:${{ secrets.CPANEL_TOKEN }}@github.com/bastirojasv/crc-ecommerce.git
           git add dist/ .htaccess .cpanel.yml
           git commit -m "Auto deploy desde GitHub Actions 🚀" || echo "Nada que commitear"
-          git push cpanel main --force
+          git push cpanel master --force
+
