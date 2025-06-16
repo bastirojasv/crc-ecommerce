@@ -172,7 +172,6 @@ export class ProductsComponent {
     this.sortOption = '';
     this.currentPage = 1;
     this.updateQueryParams();
-    // Quita estas líneas:
   }
 
   // Paginación
