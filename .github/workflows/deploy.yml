@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build --configuration production
+        run: npx ng build crc-ecommerce --configuration production
 
       - name: Ensure .htaccess is present
         run: |
