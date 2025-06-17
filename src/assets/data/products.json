@@ -694,9 +694,10 @@
   {
     "id": 77,
     "name": "CLIP PORTA GUANTES",
-    "description": "nan",
+    "description": "El clip está diseñado en polipropileno. Posee un excelente ajuste y mordida resistente. Una de las bocas se engancha a presión sobre la muñequera del par de guantes, la otra es para acoplar al equipo estructural.",
     "images": [
-      "image077.png"
+      "image077.png",
+      "image077_2.png"
     ],
     "categoryId": 1
   },
@@ -777,14 +778,17 @@
     "name": "CARETA FACIAL CILINDRIC ARCO FLASH12 AF  LIBUS",
     "description": "Protector facial contra arco eléctrico. Posee una capa especial anti-niebla para evitar la obstrucción de la visibilidad por condiciones externas o por la respiración del trabajador. Además proporciona una excelente definición de color, dando al usuario la mejor protección y visión necesaria para realizar su trabajo",
     "images": [
-      "image086.png"
+      "image086.png",
+      "image086_2.png",
+      "image086_3.png",
+      "image086_4.png"
     ],
     "categoryId": 1
   },
   {
     "id": 87,
     "name": "MICA POLICARBONATO 1000 HRS RESISTOR",
-    "description": "nan",
+    "description": "Mica de policarbonato altamente resistente. Fabricada con materiales de alta calidad, nuestra mica proporciona una visión clara y protección contra chispas, salpicaduras y radiación UV dañina. Con una instalación sencilla y durabilidad excepcional, nuestra mica es la elección ideal para los profesionales que buscan calidad y seguridad en cada trabajo. <br> Su empaque es individual y cada mica viene con film protector para evitar desperfectos. <br> Las medidas del producto son 114,4 mm x 50,8 mm y tiene un grosor de 0,75 mm",
     "images": [
       "image087.png"
     ],
@@ -793,7 +797,7 @@
   {
     "id": 88,
     "name": "VIDRIOS PARA MASCARA DE SOLDAR OSCURO / CLARO GRADO 12",
-    "description": "nan",
+    "description": "<p>COLOR: Oscuro (Grado 12)<br>CARACTERISTICAS:</p><ul><li>Se utiliza como barrera de protección secundaria en la máscara de soldar Resistor, se puede utilizar sobre el filtro inactínico (vidrio oscuro graduado) de la escotilla pivotante de la máscara, esto a modo de barrera de protección para aumentar la vida útil del filtro.</li>Puede ser utilizado en la escotilla fija de la máscara, aplicando como barrera de protección frente a la proyección de chispas o escoria de soldadura a los ojos.<li>Producto debe ser cambiado una vez cumplida su vida útil.</li><li>Medidas 108X50 MM.</li></ul>",
     "images": [
       "image088.png"
     ],
@@ -820,7 +824,7 @@
   {
     "id": 91,
     "name": "VISOR MASCARA GAP 100",
-    "description": "nan",
+    "description": "<p>COMPOSICIÓN: Policarbonato.<br />Repuesto de visor para máscara fotosensible GAP-100, de<br />ajuste facil y seguro, formado por una pantalla rectangular de<br />PETG incolora que protege la unidad de filtro fotosensible.<br />Medidas: 11,5 cms x 8,5 cms.</p>",
     "images": [
       "image091.png"
     ],
@@ -829,9 +833,10 @@
   {
     "id": 92,
     "name": "MASCARA DE SOLDAR AVIATOR F3 SPACEPOWER",
-    "description": "* Máscara de soldar fotosensible, para todos los procesos de soldadaura eléctrica y esmerilado. * El filtro de control de sombra reaciona a una alta velocidad de oscurecimiento de 1/25.000 segundos lo que brinda máxima protección ocular. * Las máscaras son fabricadas en Nylon de alta resistencia para una mayor durabilidad. * Posee swicht para seleccionar entre procesos de soldadura o esmerilado, de esta manera al seleccionar la función GRN, el filtro permite una visión clara del trabajo que se realiza. * Regulación infinita de sensibilidad para ambientes de mayor luminosidad o cuando se utiliza bajo amperaje en Tig. * Regulación infinta del tiempo de retardo de la sombra de oscuro a claro para soldaduras que mantienen luminosidad",
+    "description": "<p>Máscara de soldar fotosensible, para todos los procesos de soldadura eléctrica y esmerilado.</p><ul>  <li>El filtro de control de sombra reacciona a una alta velocidad de oscurecimiento de 1/25.000 segundos, lo que brinda máxima protección ocular.</li>  <li>Las máscaras son fabricadas en Nylon de alta resistencia para una mayor durabilidad.</li>  <li>Posee switch para seleccionar entre procesos de soldadura o esmerilado. Al seleccionar la función GRN, el filtro permite una visión clara del trabajo que se realiza.</li>  <li>Regulación infinita de sensibilidad para ambientes de mayor luminosidad o cuando se utiliza bajo amperaje en Tig.</li>  <li>Regulación infinita del tiempo de retardo de la sombra de oscuro a claro para soldaduras que mantienen luminosidad.</li></ul>",
     "images": [
-      "image092.png"
+      "image092.png",
+      "image092_2.png"
     ],
     "categoryId": 1
   },
@@ -847,7 +852,7 @@
   {
     "id": 94,
     "name": "MASCARA DE SOLDAR TERMOPLASTICA DREIER",
-    "description": "Posee visor alzable lo que simplifica la verificación de la soldadura.  Arnés con ajuste Ratchet.Ideal para las aplicaciones de soldadura eléctrica._x0003_El diseño amplio y la base curva permiten\nusar lentes de protección, respiradores y dispositivos de protección auditiva._x0003_",
+    "description": "Posee visor alzable lo que simplifica la verificación de la soldadura.  Arnés con ajuste Ratchet.Ideal para las aplicaciones de soldadura eléctrica. El diseño amplio y la base curva permiten\nusar lentes de protección, respiradores y dispositivos de protección auditiva.",
     "images": [
       "image094.png"
     ],
@@ -910,27 +915,33 @@
   {
     "id": 101,
     "name": "PANTALON GABARDINA NEGRO",
-    "description": "nan",
+    "description": "<p>COMPOSICIÓN: Gabardina / 100% Poliester<br />GRAMAJE: 190 GSM<br />COLOR: NEGRO</p><p>CARACTERISTICA:</p><ul><li>Pantalón de trabajo de corte recto con espalda y costados elasticados.</li><li>Bolsillos laterales cargo.</li><li>Se puede utilizar en cualquier época del año, su uso es versátil.</li><li>Talla disponible: S - XXL</li><li>Caja: 25 unidades.</li></ul>",
     "images": [
-      "image101.png"
+      "image101.png",
+      "image101_2.png",
+      "image101_3.png"
     ],
     "categoryId": 1
   },
   {
     "id": 102,
     "name": "PANTALON EJECUTIVO BEIGE",
-    "description": "Pantalón de corte recto.  Posee 4 bolsillos, 2 bolsillos frontales y 2 en espalda  Se puede utilizar en cualquier época del año, su uso es versatil",
+    "description": "<p>COMPOSICIÓN: Gabardina / 65% Poliester - 35% Algodón<br />GRAMAJE: 240 gsm<br />COLOR: Beige</p><p>CARACTERISTICAS:</p><ul><li>Pantalón de corte recto.</li><li>Posee 4 bolsillos, 2 bolsillos frontales y 2 en espalda.</li><li>Se puede utilizar en cualquier época del año, su uso es versatil.</li></ul>",
     "images": [
-      "image102.png"
+      "image102.png",
+      "image102_2.png",
+      "image102_3.png"
     ],
     "categoryId": 1
   },
   {
     "id": 103,
     "name": "PANTALON GABARDINA AZUL",
-    "description": "nan",
+    "description": "<p>COMPOSICIÓN: Gabardina / 65% Poliester - 35% Algodón<br />GRAMAJE: 240 gsm<br />COLOR: Azul Marino</p><p>CARACTERISTICAS:</p><ul><li>Pantalón de corte recto.</li><li>Posee 4 bolsillos, 2 bolsillos frontales y 2 en espalda.</li><li>Se puede utilizar en cualquier época del año, su uso es versatil.</li></ul>",
     "images": [
-      "image103.png"
+      "image103.png",
+      "image103_2.png",
+      "image103_3.png"
     ],
     "categoryId": 1
   },
@@ -939,7 +950,9 @@
     "name": "PANTALON CARGO GABARDINA NEGRO",
     "description": "Pantalón de trabajo de corte recto con espalda y costados elasticados.",
     "images": [
-      "image104.png"
+      "image104.png",
+      "image104_2.png",
+      "image104_3.png"
     ],
     "categoryId": 1
   },
@@ -948,7 +961,8 @@
     "name": "PANTALON CARGO GABARDINA AZUL",
     "description": "Pantalón de trabajo de corte recto con espalda y costados elasticados.",
     "images": [
-      "image105.png"
+      "image105.png",
+      "image105_2.png"
     ],
     "categoryId": 1
   },
@@ -957,16 +971,23 @@
     "name": "CHALECO GEOLOGO NARANJO CANVAS DE POLIESTER",
     "description": "COMPOSICIÓN: Canvas / 190 GSM / 100% Poliéster Variedad de colores: Azul marino, Rojo y Naranjo. Chaleco con cintas reflectantes en pecho y espalda. Posee una amplia variedad de bolsillos multifuncionales frontales y bolsillo mapero en espalda. Banda lateral ajustable.",
     "images": [
-      "image106.png"
+      "image106.png",
+      "image106_2.png",
+      "image106_3.png"
     ],
     "categoryId": 1
   },
   {
     "id": 107,
     "name": "CHALECO GEOLOGO 360 NARANJO //    GRIS",
-    "description": "nan",
+    "description": "<p>COMPOSICIÓN: Poplin / 100% Poliester<br />GRAMAJE: 110 gsm<br />COLOR: Naranjo</p><p>CARACTERISTICAS:</p><ul><li>Chaleco con cintas reflectantes de 2 pulgadas frontal y espalda.</li><li>Posee una variedad de bolsillos tecnicos.</li><li>Excelente calze de tallaje y resistente cierre doble carro.</li></ul>",
     "images": [
-      "image107.png"
+      "image107.png",
+      "image107_2.png",
+      "image107_3.png",
+      "image107_4.png",
+      "image107_5.png",
+      "image107_6.png"
     ],
     "categoryId": 1
   },
@@ -975,7 +996,12 @@
     "name": "CHALECO GEOLOGO POPLIN AMARILLO  Y NARANJO",
     "description": "Chaleco de trabajo con cinta reflectante normativa 360, alta visibilidad.   Posee una amplia variedad de bolsillos multifuncionales frontales y bolsillo mapero en espalda.  Excelente calze de tallaje y resistente cierre doble carro",
     "images": [
-      "image108.png"
+      "image108.png",
+      "image108_2.png",
+      "image108_3.png",
+      "image108_4.png",
+      "image108_5.png",
+      "image108_6.png"
     ],
     "categoryId": 1
   },
@@ -984,7 +1010,9 @@
     "name": "OVEROL POPLIN C/REFLECTANTE AZUL  KUMEN",
     "description": "Buzo tipo piloto fabricado en tela poplin, disponible en diversos colores. Utiilizado en diversos tipos trabajos, especialmente pensado en industrias como: Minera, Agrícola, Vial, Construcción, Pesca, y otras. Tallas Disponibles: S - XXL • Tela: Poplin. • Composición: 100% Poliéster. • Cintas reflectantes de 360º en brazos, cintura y piernas de 1\"• Cinta reflectante en espalda de 2\" •Bolsillos de parche en pecho con cierre. • Bolsillos parche en piernas. • Ajuste de pierna baja con cierre • Colores disponibles: Azul, Gris, Naranjo, Rojo, Verde",
     "images": [
-      "image109.png"
+      "image109.png",
+      "image109_2.png",
+      "image109_3.png"
     ],
     "categoryId": 1
   },
@@ -993,7 +1021,8 @@
     "name": "BUZO DESECHABLE BLANCO ACKERLAND -KUMEN- COVERAL",
     "description": "Buzo desechable de polipropileno con raquelado poliéster, con cierre frontal. Respirable. Traje posee tobillos y puños de excelentes terminaciones, a fin de reducir al máximo el ingreso de partículas y salpicaduras de líquidos. Doble costura, Capucha con ajuste elástico, Puños y tobillos elasticos de excelentes terminaciones, a fin de reducir al máximo el ingreso de partículas y salpicaduras de líquidos.",
     "images": [
-      "image110.png"
+      "image110.png",
+      "image110_2.png"
     ],
     "categoryId": 1
   },
@@ -1002,7 +1031,9 @@
     "name": "BUZO PILOTO MICROPORUS BLANCO",
     "description": "BUZO MICRROPORUS Polipropileno y Poliuterano / 40 GSM Buzo desechable con muñeca, tobillo y gorro elasticado. Posee una tapeta para proteger el cierre frontal. Posee una membrana exterior transparente, respirable e impermeable. La tela es una termofusión de los materiales que la componen, delgada y a la vez resiste la tracción",
     "images": [
-      "image111.png"
+      "image111.png",
+      "image111_2.png",
+      "image111_3.png"
     ],
     "categoryId": 1
   },
@@ -1011,7 +1042,9 @@
     "name": "BUZO DESECHABLE BICOLOR",
     "description": ": Polipropileno y Poliuterano / 40 GSM Buzo desechable con muñeca, tobillo y gorro elasticado. Posee cinta reflectante en pecho y espalda. Cuenta con una tapeta para proteger el cierre frontal. Posee una membrana exterior transparente, respirable e impermeable. La tela es una termofusión de los materiales que la componen, delgada y a la vez resiste la tracción. Protege contra el polvo en suspensión y líquidos",
     "images": [
-      "image112.png"
+      "image112.png",
+      "image112_2.png",
+      "image112_3.png"
     ],
     "categoryId": 1
   },
@@ -1020,16 +1053,19 @@
     "name": "TRAJE PU / PVC ANTIACIDO CON CINTA REFLECTANTE NARANJO/AZUL",
     "description": "Traje impermeable. Cintas reflectantes de 2\" en 360º No propaga la llama. Resistente al aceite. Ideal para trabajos con manipulación de ácidos, solventes o expuestos a la lluvia. Conjunto de dos piezas (Chaqueta con gorro y pantalón). Resistencia a Tº: -5ºC a 50ºC. (se recomienda que sea usado en estos rangos de temperaturas) Costuras selladas electrónicamente por alta frecuencia. Ventilación bajo el brazo y en espalda. Tobillos ajustables para el uso de bota",
     "images": [
-      "image113.png"
+      "image113.png",
+      "image113_2.png"
     ],
     "categoryId": 1
   },
   {
     "id": 114,
     "name": "BUZO PILOTO POPLIN NARANJO O  AZUL POLIESTER",
-    "description": "nan",
+    "description": "<p>COMPOSICIÓN: Poplin<br />GRAMAJE: 110 gsm<br />COLOR: Naranjo<br />CARACTERISTICAS:</p><ul><li>Buzo con cintas reflectantes de 1 pulgadas de ancho y en espalda de 2 pulgadas.</li><li>Posee cierre adecuado para prendas de trabajo sometidas a un uso exigente.</li><li>Excelente calze de tallaje y resistente cierre doble carro.</li><li>Cintura elasticada en espalda.</li></ul>",
     "images": [
-      "image114.png"
+      "image114.png",
+      "image114_2.png",
+      "image114_3.png"
     ],
     "categoryId": 1
   },
@@ -1038,7 +1074,8 @@
     "name": "PARKA THERM 6000 SIBERIA  CERTIFICADA",
     "description": "Chaqueta impermeable con variedad de bolsillos exteriores. Posee cintas reflectantes en manga, pecho y espalda. Gorro ajustable y desprendible, forrado con sherpa. Velcro en muñecas para un mejor ajuste. Composición oxford recubierto con PU 100% poliéster. Forro de tafetan 190T/ sherpa 100% poliéster",
     "images": [
-      "image115.png"
+      "image115.png",
+      "image115_2.png"
     ],
     "categoryId": 1
   },
@@ -1047,7 +1084,9 @@
     "name": "PARKA THERM 7000 ROJA SIBERIA",
     "description": "PARKA IMPERMEABILIDAD: 3000 mm / RESPIRABILIDAD: 1000 g/m2 Chaqueta impermeable con variedad de bolsillos exteriores e interiores",
     "images": [
-      "image116.png"
+      "image116.png",
+      "image116_2.png",
+      "image116_3.png"
     ],
     "categoryId": 1
   },
@@ -1056,7 +1095,9 @@
     "name": "BUZO DESECHABLE COVERAL  NARANJO t/XL",
     "description": "Este traje de protección, cumple con los requerimientos para categoría III sobre equipos de protección personal de acuerdo a la directiva 89/686/EEC. Tipo de protección definida por Estándar Europeo para trajes de protección química tipo 5 EN 13982-1:2004, Tipo 6 EN 13034:2005. Cuenta con puños, tobillos capucha y cintura elasticada, además de cierre con tapeta, potenciando su impermeabilidad. Para mayor visibilidad, incluye cintas reflectantes en piernas y cintura, visible en 360°.",
     "images": [
-      "image117.png"
+      "image117.png",
+      "image117_2.png",
+      "image117_3.png"
     ],
     "categoryId": 1
   },
