@@ -13,7 +13,7 @@ declare var bootstrap: any;
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.scss'
+  styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
   

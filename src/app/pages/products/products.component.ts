@@ -14,7 +14,7 @@ import { ProductCardComponent } from '../../components/product-card/product-card
   standalone: true,
   imports: [ProductCardComponent, CommonModule, FormsModule],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
   // Datos principales
