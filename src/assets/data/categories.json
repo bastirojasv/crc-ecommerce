@@ -1,14 +1,387 @@
 [
   {
     "id": 1,
-    "name": "Seguridad Industrial"
+    "name": "Seguridad Industrial",
+    "fatherId": null
   },
   {
     "id": 2,
-    "name": "Hospitalarios y Ortopedia"
+    "name": "Hospitalarios y Ortopedia",
+    "fatherId": null
   },
   {
     "id": 3,
-    "name": "Sanitización"
+    "name": "Sanitización",
+    "fatherId": null
+  },
+  {
+    "id": 4,
+    "name": "Calzado de Seguridad",
+    "fatherId": 1
+  },
+  {
+    "id": 5,
+    "name": "Vestuario",
+    "fatherId": 1
+  },
+  {
+    "id": 6,
+    "name": "Equipos e Instrumentos",
+    "fatherId": 1
+  },
+  {
+    "id": 7,
+    "name": "Protección Auditiva",
+    "fatherId": 1
+  },
+  {
+    "id": 8,
+    "name": "Cascos de Seguridad",
+    "fatherId": 1
+  },
+  {
+    "id": 9,
+    "name": "Protección Caída",
+    "fatherId": 1
+  },
+  {
+    "id": 10,
+    "name": "Protección Dérmica",
+    "fatherId": 1
+  },
+  {
+    "id": 11,
+    "name": "Protección Manos",
+    "fatherId": 1
+  },
+  {
+    "id": 12,
+    "name": "Protección Respiratoria",
+    "fatherId": 1
+  },
+  {
+    "id": 13,
+    "name": "Protección Vista",
+    "fatherId": 1
+  },
+  {
+    "id": 14,
+    "name": "Emergencia y Vialidad",
+    "fatherId": 1
+  },
+  {
+    "id": 15,
+    "name": "Sistemas de Bloqueo",
+    "fatherId": 1
+  },
+  {
+    "id": 16,
+    "name": "Duchas y Lavaojos",
+    "fatherId": 1
+  },
+  {
+    "id": 17,
+    "name": "Herramientas",
+    "fatherId": 1
+  },
+  {
+    "id": 18,
+    "name": "Botines",
+    "fatherId": 4
+  },
+  {
+    "id": 19,
+    "name": "Zapatos",
+    "fatherId": 4
+  },
+  {
+    "id": 20,
+    "name": "Zapatillas",
+    "fatherId": 4
+  },
+  {
+    "id": 21,
+    "name": "Botas",
+    "fatherId": 4
+  },
+  {
+    "id": 22,
+    "name": "Accesorios",
+    "fatherId": 4
+  },
+  {
+    "id": 23,
+    "name": "Trabajo",
+    "fatherId": 5
+  },
+  {
+    "id": 24,
+    "name": "Técnica",
+    "fatherId": 5
+  },
+  {
+    "id": 25,
+    "name": "Ignífuga",
+    "fatherId": 5
+  },
+  {
+    "id": 26,
+    "name": "Outdoor",
+    "fatherId": 5
+  },
+  {
+    "id": 27,
+    "name": "Detectores de gases",
+    "fatherId": 6
+  },
+  {
+    "id": 28,
+    "name": "Instrumentos",
+    "fatherId": 6
+  },
+  {
+    "id": 29,
+    "name": "Accesorios",
+    "fatherId": 6
+  },
+  {
+    "id": 30,
+    "name": "Fonos",
+    "fatherId": 7
+  },
+  {
+    "id": 31,
+    "name": "Tapones",
+    "fatherId": 7
+  },
+  {
+    "id": 32,
+    "name": "Cascos",
+    "fatherId": 8
+  },
+  {
+    "id": 33,
+    "name": "Arnés",
+    "fatherId": 8
+  },
+  {
+    "id": 34,
+    "name": "Jockey",
+    "fatherId": 8
+  },
+  {
+    "id": 35,
+    "name": "Accesorios",
+    "fatherId": 8
+  },
+  {
+    "id": 36,
+    "name": "Arnés de Seguridad",
+    "fatherId": 9
+  },
+  {
+    "id": 37,
+    "name": "Cabos de Vida",
+    "fatherId": 9
+  },
+  {
+    "id": 38,
+    "name": "Retráctiles",
+    "fatherId": 9
+  },
+  {
+    "id": 39,
+    "name": "Sistemas",
+    "fatherId": 9
+  },
+  {
+    "id": 40,
+    "name": "Accesorios",
+    "fatherId": 9
+  },
+  {
+    "id": 41,
+    "name": "Protección Solar",
+    "fatherId": 10
+  },
+  {
+    "id": 42,
+    "name": "Alcohol gel y cremas",
+    "fatherId": 10
+  },
+  {
+    "id": 43,
+    "name": "Cuero",
+    "fatherId": 11
+  },
+  {
+    "id": 44,
+    "name": "Desechables",
+    "fatherId": 11
+  },
+  {
+    "id": 45,
+    "name": "Resistentes a impactos",
+    "fatherId": 11
+  },
+  {
+    "id": 46,
+    "name": "Resistentes a químicos",
+    "fatherId": 11
+  },
+  {
+    "id": 47,
+    "name": "Resistentes al corte",
+    "fatherId": 11
+  },
+  {
+    "id": 48,
+    "name": "Resistencia a temperaturas",
+    "fatherId": 11
+  },
+  {
+    "id": 49,
+    "name": "Dieléctricos",
+    "fatherId": 11
+  },
+  {
+    "id": 50,
+    "name": "Uso general",
+    "fatherId": 11
+  },
+  {
+    "id": 51,
+    "name": "Manguillas",
+    "fatherId": 11
+  },
+  {
+    "id": 52,
+    "name": "Arco eléctrico",
+    "fatherId": 11
+  },
+  {
+    "id": 53,
+    "name": "Equipos autónomos y lineas de aire",
+    "fatherId": 12
+  },
+  {
+    "id": 54,
+    "name": "Máscaras y respiradores",
+    "fatherId": 12
+  },
+  {
+    "id": 55,
+    "name": "Filtros y canister",
+    "fatherId": 12
+  },
+  {
+    "id": 56,
+    "name": "Autorrescatadores",
+    "fatherId": 12
+  },
+  {
+    "id": 57,
+    "name": "Mascarillas desechables",
+    "fatherId": 12
+  },
+  {
+    "id": 58,
+    "name": "Respiración PAPR",
+    "fatherId": 12
+  },
+  {
+    "id": 59,
+    "name": "Accesorios respiración",
+    "fatherId": 12
+  },
+  {
+    "id": 60,
+    "name": "Lentes",
+    "fatherId": 13
+  },
+  {
+    "id": 61,
+    "name": "Antiparras",
+    "fatherId": 13
+  },
+  {
+    "id": 62,
+    "name": "Máscaras de soldar",
+    "fatherId": 13
+  },
+  {
+    "id": 63,
+    "name": "Visores y portavisores",
+    "fatherId": 13
+  },
+  {
+    "id": 64,
+    "name": "Accesorios",
+    "fatherId": 13
+  },
+  {
+    "id": 65,
+    "name": "Botiquines y primerios auxilios",
+    "fatherId": 14
+  },
+  {
+    "id": 66,
+    "name": "Rescate",
+    "fatherId": 14
+  },
+  {
+    "id": 67,
+    "name": "Extiontores",
+    "fatherId": 14
+  },
+  {
+    "id": 68,
+    "name": "Vialidad",
+    "fatherId": 14
+  },
+  {
+    "id": 69,
+    "name": "Antiderrame",
+    "fatherId": 14
+  },
+  {
+    "id": 70,
+    "name": "Higiene",
+    "fatherId": 14
+  },
+  {
+    "id": 71,
+    "name": "Alicates",
+    "fatherId": 17
+  },
+  {
+    "id": 72,
+    "name": "Destornilladores y botadores",
+    "fatherId": 17
+  },
+  {
+    "id": 73,
+    "name": "Herramientas de corte y desbate",
+    "fatherId": 17
+  },
+  {
+    "id": 74,
+    "name": "Herramientas de medición",
+    "fatherId": 17
+  },
+  {
+    "id": 75,
+    "name": "Llaves",
+    "fatherId": 17
+  },
+  {
+    "id": 76,
+    "name": "Herramientas varias",
+    "fatherId": 17
+  },
+  {
+    "id": 77,
+    "name": "Almacenamiento herramientas Manuales",
+    "fatherId": 17
   }
 ]

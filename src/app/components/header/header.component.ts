@@ -16,6 +16,7 @@ import { Product } from '../../models/product.model';
 })
 export class HeaderComponent implements OnInit {
   categories: Category[] = [];
+  fatherCategories: Category[] = [];
   totalItems: number = 0;
   isBouncing = false;
 
@@ -25,6 +26,11 @@ export class HeaderComponent implements OnInit {
   filteredProducts: Product[] = [];
   products: Product[] = [];
 
+  sideMenuOpen = false;
+  sideMenuStack: Category[][] = []; // Stack para navegar entre niveles
+  currentCategories: Category[] = []; // Categorías actuales a mostrar
+  sideMenuTitle: string = 'Categorías';
+
   constructor(
     private categoryService: CategoryService, 
     private router : Router,
@@ -33,10 +39,10 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    
     // Obtain all categories
     this.categoryService.getCategories().subscribe(data => {
       this.categories = data;
+      this.fatherCategories = this.categories.filter(category => category.fatherId === null);
     });
 
     // Obtain all products 
@@ -95,5 +101,66 @@ export class HeaderComponent implements OnInit {
     setTimeout(() => {
       this.isBouncing = false;
     }, 400);
+  }
+
+  // Abrir menú lateral con categorías padre
+  openSideMenu() {
+    this.sideMenuOpen = true;
+    this.sideMenuStack = [];
+    this.currentCategories = this.fatherCategories;
+    this.sideMenuTitle = 'Categorías';
+  }
+
+  // Cerrar menú lateral
+  closeSideMenu() {
+    this.sideMenuOpen = false;
+    this.sideMenuStack = [];
+    this.currentCategories = [];
+  }
+
+  // Navegar a subcategorías
+  openSubcategories(category: Category) {
+    const subcategories = this.categories.filter(cat => cat.fatherId === category.id);
+    if (subcategories.length > 0) {
+      this.sideMenuStack.push(this.currentCategories);
+      this.currentCategories = subcategories;
+      this.sideMenuTitle = category.name;
+    } else {
+      // Si no hay subcategorías, navegar a la categoría
+      this.goToCategory(category.id);
+      this.closeSideMenu();
+    }
+  }
+
+  // Volver al nivel anterior
+  goBackSideMenu() {
+    if (this.sideMenuStack.length > 0) {
+      this.currentCategories = this.sideMenuStack.pop()!;
+      // Actualiza el título
+      if (this.sideMenuStack.length === 0) {
+        this.sideMenuTitle = 'Categorías';
+      } else {
+        // Busca el nombre de la categoría anterior
+        const prevCat = this.categories.find(cat =>
+          cat.id === this.currentCategories[0]?.fatherId
+        );
+        this.sideMenuTitle = prevCat ? prevCat.name : 'Categorías';
+      }
+    }
+  }
+
+  // Mostrar todos los productos de la categoría actual
+  showAllCurrentCategory() {
+    // Si estamos en subcategoría, busca el padre
+    const parentId = this.currentCategories[0]?.fatherId;
+    if (parentId) {
+      this.goToCategory(parentId);
+    }
+    this.closeSideMenu();
+  }
+
+  // Add this method to your HeaderComponent class
+  hasSubcategories(category: any): boolean {
+    return Array.isArray(category.subcategories) && category.subcategories.length > 0;
   }
 }
