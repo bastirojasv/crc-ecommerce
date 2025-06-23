@@ -6,13 +6,25 @@ import { CategoryService, Category } from '../../services/category.service';
 import { CartService } from '../../services/cart.service';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('sideMenuAnimation', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('300ms cubic-bezier(.4,0,.2,1)', style({ transform: 'translateX(0)' }))
+      ]),
+      transition(':leave', [
+        animate('300ms cubic-bezier(.4,0,.2,1)', style({ transform: 'translateX(-100%)' }))
+      ])
+    ])
+  ]
 })
 export class HeaderComponent implements OnInit {
   categories: Category[] = [];
@@ -35,7 +47,7 @@ export class HeaderComponent implements OnInit {
     private categoryService: CategoryService, 
     private router : Router,
     private cartService: CartService,
-    private productService: ProductService // Assuming productService is used for products
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {

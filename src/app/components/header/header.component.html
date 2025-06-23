@@ -1,29 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid d-flex align-items-center flex-wrap">
-    <!-- Botón hamburguesa primero -->
-    <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-dark bg-dark custom-navbar">
+  <div class="header-flex">
+
+    <!-- Botón de menú lateral categorías -->
+    <button class="navbar-toggler" type="button" (click)="openSideMenu()">
+      <i class="fas fa-bars"></i>
     </button>
 
     <!-- Logo -->
-    <a class="navbar-brand order-2" routerLink="/">
-      <img src="assets/images/logo.png" alt="CRC Comercial" style="height: 60px;" />
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.png" alt="CRC Comercial" />
     </a>
 
-    <!-- Contenedor del carrito -->
-    <div class="cart-wrapper order-3 order-lg-last ms-lg-auto me-3">
-      <a routerLink="/cart" class="position-relative cart-always-visible">
-        <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>
-        <span
-          *ngIf="totalItems > 0"
-          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-          {{ totalItems }}
-        </span>
-      </a>
-    </div>
-
-    <!-- Barra de búsqueda SIEMPRE visible -->
-    <div class="search-wrapper w-100 my-2 my-lg-0 order-4">
+    <!-- Buscador -->
+    <div class="search-wrapper">
       <div class="search-box">
         <i class="fas fa-search search-icon"></i>
         <input
@@ -35,15 +24,11 @@
           (focus)="isFocused = true"
           (blur)="isFocused = false"
         />
-        <!-- Suggestion list -->
         <ul *ngIf="searchText && filteredProducts.length >= 0" class="suggestions-list">
-          <!-- Sugerencia basada en texto ingresado -->
           <li class="suggestion-item search-all" (click)="goToSearchResults()">
             <i class="fas fa-search me-2 text-muted"></i>
             Buscar “{{ searchText }}” en todos los productos
           </li>
-
-          <!-- Sugerencias de productos -->
           <li *ngFor="let product of filteredProducts" class="suggestion-item">
             <a (click)="goToProduct(product.id)">
               <img
@@ -59,31 +44,27 @@
       </div>
     </div>
 
-    <!-- Menú colapsable -->
-    <div class="collapse navbar-collapse justify-content-end order-5" id="navbarNav">
-      <ul class="navbar-nav d-flex align-items-center me-3">
-        <li class="nav-item">
-          <a class="nav-link text-uppercase fw-bold" routerLink="/products">
-            Todos los productos
-          </a>
-        </li>
-        <li class="nav-item" *ngFor="let category of fatherCategories">
-          <a
-            class="nav-link text-uppercase"
-            [routerLink]="['/products']"
-            [queryParams]="{ categories: category.id }"
-          >
-            {{ category.name }}
-          </a>
-        </li>
-      </ul>
+    <!-- Carrito -->
+    <div class="cart-wrapper">
+      <a routerLink="/cart" class="position-relative cart-always-visible">
+        <i class="fas fa-shopping-cart fa-lg cart-icon" [ngClass]="{ 'animate': isBouncing }"></i>
+        <span
+          *ngIf="totalItems > 0"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+          {{ totalItems }}
+        </span>
+      </a>
     </div>
   </div>
 </nav>
 
 <!-- Menú lateral móvil -->
 <div class="side-menu-backdrop" *ngIf="sideMenuOpen" (click)="closeSideMenu()"></div>
-<aside class="side-menu" [class.open]="sideMenuOpen">
+<aside
+  class="side-menu"
+  *ngIf="sideMenuOpen"
+  @sideMenuAnimation
+>
   <div class="side-menu-header">
     <button class="close-btn" (click)="closeSideMenu()">&times;</button>
     <span class="side-menu-title">{{ sideMenuTitle }}</span>
@@ -107,8 +88,3 @@
     </ul>
   </div>
 </aside>
-
-<!-- Botón hamburguesa: solo móvil -->
-<button class="navbar-toggler d-lg-none" type="button" (click)="openSideMenu()">
-  <span class="navbar-toggler-icon"></span>
-</button>

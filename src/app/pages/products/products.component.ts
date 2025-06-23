@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ProductService } from '../../services/product.service';
 import { CategoryService } from '../../services/category.service';
@@ -12,7 +12,7 @@ import { ProductCardComponent } from '../../components/product-card/product-card
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule, FormsModule],
+  imports: [ProductCardComponent, CommonModule, FormsModule, RouterModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
@@ -63,10 +63,10 @@ export class ProductsComponent {
   // Sincroniza los filtros visuales con los parámetros de la URL
   syncFiltersWithParams(params: any): void {
     this.searchText = params['search'] || '';
-    this.selectedCategories = params['categories']
-      ? (Array.isArray(params['categories'])
-          ? params['categories'].map(Number)
-          : params['categories'].split(',').map(Number))
+    this.selectedCategories = params['category']
+      ? (Array.isArray(params['category'])
+          ? params['category'].map(Number)
+          : params['category'].split(',').map(Number))
       : [];
     this.currentPage = params['page'] ? +params['page'] : 1;
   }
@@ -97,8 +97,6 @@ export class ProductsComponent {
     }
 
     this.filteredProducts = result;
-    // Elimina o comenta esta línea:
-    // this.currentPage = 1;
   }
 
   // Actualiza los productos paginados
@@ -142,27 +140,18 @@ export class ProductsComponent {
     }
     this.currentPage = 1; // Reinicia a la primera página al filtrar
     this.updateQueryParams();
-    // Quita estas líneas:
-    // this.applyFilters();
-    // this.updatePaginatedProducts();
   }
 
   // Maneja el cambio de búsqueda
   onSearchChange(): void {
     this.currentPage = 1;
     this.updateQueryParams();
-    // Quita estas líneas:
-    // this.applyFilters();
-    // this.updatePaginatedProducts();
   }
 
   // Maneja el cambio de orden
   onSortChange(): void {
     this.currentPage = 1;
     this.updateQueryParams();
-    // Quita estas líneas:
-    // this.applyFilters();
-    // this.updatePaginatedProducts();
   }
 
   // Limpia todos los filtros
